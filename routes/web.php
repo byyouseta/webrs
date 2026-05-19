@@ -20,7 +20,9 @@ Auth::routes([
     'reset' => false, // Password Reset Routes...
     'verify' => false, // Email Verification Routes...
 ]);
-
+//Content
+Route::get('/information', [App\Http\Controllers\ContentController::class, 'information'])->name('content.information');
+//Master User
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/master/users', [App\Http\Controllers\UserController::class, 'index'])->name('master.users');
 Route::get('/master/permissions', [App\Http\Controllers\UserController::class, 'permissions'])->name('master.permissions');

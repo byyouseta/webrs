@@ -23,6 +23,20 @@
                 <span class="text">Dashboard</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('content.information') }}">
+                <span class="nav-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-bookmarks">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M15 10v11l-5 -3l-5 3v-11a3 3 0 0 1 3 -3h4a3 3 0 0 1 3 3" />
+                        <path d="M11 3h5a3 3 0 0 1 3 3v11" />
+                    </svg>
+                </span>
+                <span class="text">Daftar Informasi</span>
+            </a>
+        </li>
 
         {{-- Title --}}
         <li class="nav-item">
@@ -130,12 +144,12 @@
 
 </div>
 
-
+{{-- Mobile Sidebar --}}
 <div class="offcanvasNav offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
     aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
 
-        <a class="d-flex align-items-center gap-2" href="@@webRoot/index.html">
+        <a class="d-flex align-items-center gap-2" href="{{ route('content.information') }}">
             <img src="{{ asset('backend/assets/images/brand/logo/logo-icon.svg') }}" alt="" />
             <span class="fw-bold fs-4  site-logo-text">Dasher</span>
         </a>
@@ -148,7 +162,7 @@
 
             <!-- Nav item -->
             <li class="nav-item">
-                <a class="nav-link active" href="@@webRoot/index.html">
+                <a class="nav-link" href="@@webRoot/index.html">
                     <span class="nav-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -161,6 +175,21 @@
                         </svg>
                     </span>
                     <span class="text">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('content.information') }}">
+                    <span class="nav-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-bookmarks">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M15 10v11l-5 -3l-5 3v-11a3 3 0 0 1 3 -3h4a3 3 0 0 1 3 3" />
+                            <path d="M11 3h5a3 3 0 0 1 3 3v11" />
+                        </svg>
+                    </span>
+                    <span class="text">Daftar Informasi</span>
                 </a>
             </li>
 
