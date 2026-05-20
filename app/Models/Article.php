@@ -27,15 +27,12 @@ class Article extends Model
     public function getActivitylogOptions(): LogOptions
     {
         return LogOptions::defaults()
-
             ->logOnly([
                 'type',
                 'is_published',
                 'published_at'
             ])
-
             ->logOnlyDirty()
-
             ->setDescriptionForEvent(
                 fn(string $eventName)
                 => "Artikel {$eventName}"

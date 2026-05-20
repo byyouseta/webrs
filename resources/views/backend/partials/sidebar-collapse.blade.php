@@ -37,7 +37,55 @@
                 <span class="text">Daftar Informasi</span>
             </a>
         </li>
-
+        <li class="nav-item">
+            <div class="nav-heading">Pengaturan Web</div>
+            <hr class="mx-5 nav-line mb-1" />
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('master.languages') }}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-language">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M9 6.371c0 4.418 -2.239 6.629 -5 6.629" />
+                    <path d="M4 6.371h7" />
+                    <path d="M5 9c0 2.144 2.252 3.908 6 4" />
+                    <path d="M12 20l4 -9l4 9" />
+                    <path d="M19.1 18h-6.2" />
+                    <path d="M6.694 3l.793 .582" />
+                </svg>
+                <span class="text">Pengaturan Bahasa</span>
+            </a>
+            <a class="nav-link" href="{{ route('master.header') }}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-world-www">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M19.5 7a9 9 0 0 0 -7.5 -4a8.991 8.991 0 0 0 -7.484 4" />
+                    <path d="M11.5 3a16.989 16.989 0 0 0 -1.826 4" />
+                    <path d="M12.5 3a16.989 16.989 0 0 1 1.828 4" />
+                    <path d="M19.5 17a9 9 0 0 1 -7.5 4a8.991 8.991 0 0 1 -7.484 -4" />
+                    <path d="M11.5 21a16.989 16.989 0 0 1 -1.826 -4" />
+                    <path d="M12.5 21a16.989 16.989 0 0 0 1.828 -4" />
+                    <path d="M2 10l1 4l1.5 -4l1.5 4l1 -4" />
+                    <path d="M17 10l1 4l1.5 -4l1.5 4l1 -4" />
+                    <path d="M9.5 10l1 4l1.5 -4l1.5 4l1 -4" />
+                </svg>
+                <span class="text">Pengaturan Web</span>
+            </a>
+            <a class="nav-link" href="{{ route('master.menu') }}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-category">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 4h6v6h-6l0 -6" />
+                    <path d="M14 4h6v6h-6l0 -6" />
+                    <path d="M4 14h6v6h-6l0 -6" />
+                    <path d="M14 17a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                </svg>
+                <span class="text">Pengaturan Menu</span>
+            </a>
+        </li>
         {{-- Title --}}
         <li class="nav-item">
             <div class="nav-heading">Pengaturan Users</div>
@@ -84,7 +132,8 @@
                         <!-- ICON -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-home-lock">
+                            stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-home-lock">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path d="M5 12h-2l9 -9l8 8" />
                             <path d="M5 12v7a2 2 0 0 0 2 2h6" />
@@ -192,7 +241,55 @@
                     <span class="text">Daftar Informasi</span>
                 </a>
             </li>
-
+            <li class="nav-item">
+                <div class="nav-heading">Pengaturan Web</div>
+                <hr class="mx-5 nav-line mb-1" />
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('master.languages') }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-language">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M9 6.371c0 4.418 -2.239 6.629 -5 6.629" />
+                        <path d="M4 6.371h7" />
+                        <path d="M5 9c0 2.144 2.252 3.908 6 4" />
+                        <path d="M12 20l4 -9l4 9" />
+                        <path d="M19.1 18h-6.2" />
+                        <path d="M6.694 3l.793 .582" />
+                    </svg>
+                    <span class="text">Pengaturan Bahasa</span>
+                </a>
+                <a class="nav-link" href="{{ route('master.header') }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-world-www">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M19.5 7a9 9 0 0 0 -7.5 -4a8.991 8.991 0 0 0 -7.484 4" />
+                        <path d="M11.5 3a16.989 16.989 0 0 0 -1.826 4" />
+                        <path d="M12.5 3a16.989 16.989 0 0 1 1.828 4" />
+                        <path d="M19.5 17a9 9 0 0 1 -7.5 4a8.991 8.991 0 0 1 -7.484 -4" />
+                        <path d="M11.5 21a16.989 16.989 0 0 1 -1.826 -4" />
+                        <path d="M12.5 21a16.989 16.989 0 0 0 1.828 -4" />
+                        <path d="M2 10l1 4l1.5 -4l1.5 4l1 -4" />
+                        <path d="M17 10l1 4l1.5 -4l1.5 4l1 -4" />
+                        <path d="M9.5 10l1 4l1.5 -4l1.5 4l1 -4" />
+                    </svg>
+                    <span class="text">Pengaturan Web</span>
+                </a>
+                <a class="nav-link" href="{{ route('master.menu') }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-category">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 4h6v6h-6l0 -6" />
+                        <path d="M14 4h6v6h-6l0 -6" />
+                        <path d="M4 14h6v6h-6l0 -6" />
+                        <path d="M14 17a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                    </svg>
+                    <span class="text">Pengaturan Menu</span>
+                </a>
+            </li>
             {{-- Title --}}
             <li class="nav-item">
                 <div class="nav-heading">Pengaturan Users</div>

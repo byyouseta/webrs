@@ -160,15 +160,6 @@ class Articles extends Component
             throw $e;
         }
 
-        // $thumbnailPath = $this->currentThumbnail;
-        // if ($this->thumbnail) {
-        //     $thumbnailPath = $this->thumbnail
-        //         ->store(
-        //             'articles',
-        //             'public'
-        //         );
-        // }
-
         $thumbnailPath = $this->currentThumbnail;
 
         if ($this->thumbnail) {

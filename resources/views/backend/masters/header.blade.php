@@ -3,17 +3,16 @@
 @section('content')
     <div class="row mb-6 g-6">
         <div class="col-xl-12 col-lg-12">
-            <div class="card">
+            {{-- <div class="card">
                 <div class="card-header d-flex align-items-center justify-content-between">
-                    <h5 class="mb-0">Informasi</h5>
-                    {{-- <a href="#!" class="btn btn-primary btn-sm">View All</a> --}}
+                    <h5 class="mb-0">Header Setting</h5>
                 </div>
                 <div class="card-body">
-                    <p class="mb-0">
-                        <livewire:content.article.articles />
-                    </p>
+                    <p class="mb-0"> --}}
+            <livewire:master.header-setting />
+            {{-- </p>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection

@@ -21,7 +21,10 @@ Auth::routes([
     'verify' => false, // Email Verification Routes...
 ]);
 //Content
-Route::get('/information', [App\Http\Controllers\ContentController::class, 'information'])->name('content.information');
+Route::get('master/information', [App\Http\Controllers\ContentController::class, 'information'])->name('content.information');
+Route::get('master/languages', [App\Http\Controllers\MasterController::class, 'languages'])->name('master.languages');
+Route::get('master/header', [App\Http\Controllers\MasterController::class, 'header'])->name('master.header');
+Route::get('master/menu', [App\Http\Controllers\MasterController::class, 'menu'])->name('master.menu');
 //Master User
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/master/users', [App\Http\Controllers\UserController::class, 'index'])->name('master.users');

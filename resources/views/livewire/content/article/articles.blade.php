@@ -1,12 +1,12 @@
 <div>
-    <div class="row align-items-center mb-3 g-2">
-        <div class="col-md-6">
+    <div class="d-flex flex-column flex-md-row gap-2 mb-3">
+        <div style="flex:1; max-width:500px;">
             <input type="text" class="form-control" placeholder="Cari judul atau konten..."
                 wire:model.live.debounce.500ms="search">
         </div>
-        <div class="col-md-6 text-md-end">
+        <div>
             @if (!$showForm)
-                <button class="btn btn-success w-100 w-md-auto" wire:click="create">
+                <button class="btn btn-success" wire:click="create">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-circle-plus">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -15,7 +15,7 @@
                     </svg> Tambah Artikel
                 </button>
             @else
-                <button class="btn btn-danger w-100 w-md-auto" wire:click="cancel">
+                <button class="btn btn-danger" wire:click="cancel">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-square-x">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -38,9 +38,9 @@
         <form wire:submit.prevent="save">
             <div class="card">
                 <div class="card-body">
-                    <div class="row">
+                    <div class="row g-3">
                         <div class="col-md-4">
-                            <label>Tipe</label>
+                            <label class="form-label">Tipe</label>
                             <select wire:model="type" class="form-control">
                                 <option value="berita">
                                     Berita
@@ -93,7 +93,7 @@
                         </div>
 
                         <div class="col-md-4">
-                            <label>Publish</label>
+                            <label class="form-label">Publish</label>
                             <input type="checkbox" wire:model="is_published">
                         </div>
                     </div>
@@ -126,7 +126,6 @@
                             </button>
                         </li>
                     </ul>
-
 
                     <div class="tab-content mt-3">
                         <div class="{{ $activeTab == 'id' ? '' : 'd-none' }}">
