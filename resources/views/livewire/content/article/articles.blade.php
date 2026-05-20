@@ -1,15 +1,30 @@
 <div>
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <h4>Daftar Artikel</h4>
-        @if (!$showForm)
-            <button class="btn btn-success" wire:click="create">
-                + Tambah Artikel
-            </button>
-        @else
-            <button class="btn btn-secondary" wire:click="cancel">
-                Tutup Form
-            </button>
-        @endif
+    <div class="row align-items-center mb-3 g-2">
+        <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Cari judul atau konten..."
+                wire:model.live.debounce.500ms="search">
+        </div>
+        <div class="col-md-6 text-md-end">
+            @if (!$showForm)
+                <button class="btn btn-success w-100 w-md-auto" wire:click="create">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-circle-plus">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M4.929 4.929a10 10 0 1 1 14.141 14.141a10 10 0 0 1 -14.14 -14.14m8.071 4.071a1 1 0 1 0 -2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 1 0 2 0v-2h2a1 1 0 1 0 0 -2h-2v-2z" />
+                    </svg> Tambah Artikel
+                </button>
+            @else
+                <button class="btn btn-danger w-100 w-md-auto" wire:click="cancel">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-square-x">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M19 2h-14a3 3 0 0 0 -3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3 -3v-14a3 3 0 0 0 -3 -3zm-9.387 6.21l.094 .083l2.293 2.292l2.293 -2.292a1 1 0 0 1 1.497 1.32l-.083 .094l-2.292 2.293l2.292 2.293a1 1 0 0 1 -1.32 1.497l-.094 -.083l-2.293 -2.292l-2.293 2.292a1 1 0 0 1 -1.497 -1.32l.083 -.094l2.292 -2.293l-2.292 -2.293a1 1 0 0 1 1.32 -1.497z" />
+                    </svg> Tutup Form
+                </button>
+            @endif
+        </div>
     </div>
 
     @if ($showForm)
@@ -179,45 +194,49 @@
         <hr>
 
     @endif
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Judul</th>
-                <th>Ringkasan</th>
-                <th>Tipe</th>
-                <th>Status</th>
-                <th>Aksi</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($articles as $item)
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>
-                        {{ $item->translations->first()?->title }}
-                    </td>
-                    <td>
-                        {{ $item->translations->first()?->excerpt }}
-                    </td>
-                    <td>
-                        {{ ucfirst($item->type) }}
-                    </td>
-
-                    <td>
-                        {{ $item->is_published ? 'Published' : 'Draft' }}
-                    </td>
-                    <td>
-                        <button class="btn btn-warning btn-sm" wire:click="edit({{ $item->id }})">
-                            Edit
-                        </button>
-                        <button class="btn btn-danger btn-sm" wire:click="confirmDelete({{ $item->id }})">
-                            Delete
-                        </button>
-                    </td>
+                    <th>Judul</th>
+                    <th>Ringkasan</th>
+                    <th>Tipe</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
                 </tr>
-            @endforeach
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach ($articles as $item)
+                    <tr>
+                        <td>
+                            {{ $item->translations->first()?->title }}
+                        </td>
+                        <td>
+                            {{ $item->translations->first()?->excerpt }}
+                        </td>
+                        <td>
+                            {{ ucfirst($item->type) }}
+                        </td>
+
+                        <td>
+                            {{ $item->is_published ? 'Published' : 'Draft' }}
+                        </td>
+                        <td>
+                            <button class="btn btn-warning btn-sm" wire:click="edit({{ $item->id }})">
+                                Edit
+                            </button>
+                            <button class="btn btn-danger btn-sm" wire:click="confirmDelete({{ $item->id }})">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+    <div class="mt-3">
+        {{ $articles->links() }}
+    </div>
 
     <div class="modal fade" id="deleteModal" tabindex="-1" wire:ignore.self>
         <div class="modal-dialog modal-dialog-centered">

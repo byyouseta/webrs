@@ -8,10 +8,16 @@ use Illuminate\Support\Facades\Storage;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Str;
+use Livewire\WithPagination;
 
 class Articles extends Component
 {
     use WithFileUploads;
+    use WithPagination;
+
+    public $search = '';
+
+    protected $paginationTheme = 'bootstrap';
 
     public $articleId;
     public $type = 'berita';
@@ -286,17 +292,40 @@ class Articles extends Component
         );
     }
 
+    public function updatingSearch()
+    {
+        $this->resetPage();
+    }
+
     public function render()
     {
+        $articles = Article::with('translations')
+            ->when(
+                $this->search,
+                function ($query) {
+                    $query->whereHas(
+                        'translations',
+                        function ($q) {
+                            $q->where(
+                                'title',
+                                'like',
+                                '%' . $this->search . '%'
+                            )
+                                ->orWhere(
+                                    'content',
+                                    'like',
+                                    '%' . $this->search . '%'
+                                );
+                        }
+                    );
+                }
+            )
+            ->latest()
+            ->paginate(10);
+
         return view(
             'livewire.content.article.articles',
-            [
-
-                'articles' => Article::with(
-                    'translations'
-                )->latest()->get()
-
-            ]
+            compact('articles')
         );
     }
 }
