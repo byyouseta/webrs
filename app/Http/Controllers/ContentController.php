@@ -13,6 +13,26 @@ class ContentController extends Controller
 
     public function information()
     {
-        return view('backend.information.index');
+        return view('backend.content.index');
+    }
+
+    public function heroBanners()
+    {
+        return view('backend.content.hero-banners');
+    }
+
+    public function heroShortcuts()
+    {
+        return view('backend.content.hero-shortcuts');
+    }
+
+    public function pages()
+    {
+        return view('backend.content.pages');
+    }
+
+    public function services()
+    {
+        return view('backend.content.services');
     }
 }

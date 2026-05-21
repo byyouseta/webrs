@@ -1,6 +1,6 @@
 <div id="miniSidebar">
     <div class="brand-logo">
-        <a class="d-none d-md-flex align-items-center gap-2" href="@@webRoot/index.html">
+        <a class="d-none d-md-flex align-items-center gap-2" href="{{ route('home') }}">
             <img src="{{ asset('backend/assets/images/brand/logo/logo-icon.svg') }}" alt="" />
             <span class="fw-bold fs-4  site-logo-text">Dasher</span>
         </a>
@@ -11,7 +11,7 @@
         <li class="nav-item">
             <a class="nav-link" href="{{ route('home') }}">
                 <span class="nav-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                         stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dashboard">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -24,9 +24,78 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{ route('content.hero-banners') }}">
+                <span class="nav-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user-star">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                        <path d="M6 21v-2a4 4 0 0 1 4 -4h.5" />
+                        <path
+                            d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138" />
+                    </svg>
+                </span>
+                <span class="text">Hero Banners</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('content.hero-shortcuts') }}">
+                <span class="nav-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user-share">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                        <path d="M6 21v-2a4 4 0 0 1 4 -4h3" />
+                        <path d="M16 22l5 -5" />
+                        <path d="M21 21.5v-4.5h-4.5" />
+                    </svg>
+                </span>
+                <span class="text">Hero Shortcuts</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('content.pages') }}">
+                <span class="nav-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-html">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M13 16v-8l2 5l2 -5v8" />
+                        <path d="M1 16v-8" />
+                        <path d="M5 8v8" />
+                        <path d="M1 12h4" />
+                        <path d="M7 8h4" />
+                        <path d="M9 8v8" />
+                        <path d="M20 8v8h3" />
+                    </svg>
+                </span>
+                <span class="text">Pages</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('content.services') }}">
+                <span class="nav-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-hours-24">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 13c.325 2.532 1.881 4.781 4 6" />
+                        <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2" />
+                        <path d="M4 5v4h4" />
+                        <path d="M12 15h2a1 1 0 0 1 1 1v1a1 1 0 0 1 -1 1h-1a1 1 0 0 0 -1 1v1a1 1 0 0 0 1 1h2" />
+                        <path d="M18 15v2a1 1 0 0 0 1 1h1" />
+                        <path d="M21 15v6" />
+                    </svg>
+                </span>
+                <span class="text">Services</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="{{ route('content.information') }}">
                 <span class="nav-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-bookmarks">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -43,9 +112,9 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ route('master.languages') }}">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-language">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-language">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M9 6.371c0 4.418 -2.239 6.629 -5 6.629" />
                     <path d="M4 6.371h7" />
@@ -57,9 +126,9 @@
                 <span class="text">Pengaturan Bahasa</span>
             </a>
             <a class="nav-link" href="{{ route('master.header') }}">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-world-www">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-world-www">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M19.5 7a9 9 0 0 0 -7.5 -4a8.991 8.991 0 0 0 -7.484 4" />
                     <path d="M11.5 3a16.989 16.989 0 0 0 -1.826 4" />
@@ -74,9 +143,9 @@
                 <span class="text">Pengaturan Web</span>
             </a>
             <a class="nav-link" href="{{ route('master.menu') }}">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-category">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-category">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M4 4h6v6h-6l0 -6" />
                     <path d="M14 4h6v6h-6l0 -6" />
@@ -97,7 +166,7 @@
                 aria-expanded="false">
                 <span class="nav-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user-key">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
@@ -213,7 +282,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="@@webRoot/index.html">
                     <span class="nav-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                             stroke-linejoin="round"
                             class="icon icon-tabler icons-tabler-outline icon-tabler-dashboard">
@@ -229,7 +298,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('content.information') }}">
                     <span class="nav-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round"
                             class="icon icon-tabler icons-tabler-outline icon-tabler-bookmarks">
@@ -247,7 +316,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('master.languages') }}">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-language">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -261,7 +330,7 @@
                     <span class="text">Pengaturan Bahasa</span>
                 </a>
                 <a class="nav-link" href="{{ route('master.header') }}">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-world-www">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -278,7 +347,7 @@
                     <span class="text">Pengaturan Web</span>
                 </a>
                 <a class="nav-link" href="{{ route('master.menu') }}">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-category">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -300,7 +369,7 @@
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     <span class="nav-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                             stroke-linejoin="round"
                             class="icon icon-tabler icons-tabler-outline icon-tabler-user-key">
@@ -391,10 +460,8 @@
                             <span>Logs</span>
                         </a>
                     </li>
-
                 </ul>
             </li>
-
         </ul>
     </div>
 </div>

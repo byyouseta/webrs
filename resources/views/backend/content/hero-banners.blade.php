@@ -1,0 +1,19 @@
+@extends('layouts.master')
+
+@section('content')
+    <div class="row mb-6 g-6">
+        <div class="col-xl-12 col-lg-12">
+            <div class="card">
+                <div class="card-header d-flex align-items-center justify-content-between">
+                    <h5 class="mb-0">Hero Banners</h5>
+                    {{-- <a href="#!" class="btn btn-primary btn-sm">View All</a> --}}
+                </div>
+                <div class="card-body">
+                    <p class="mb-0">
+                        <livewire:content.hero-banners />
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection

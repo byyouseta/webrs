@@ -141,9 +141,25 @@
                             @error('excerpt_id')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
-
-                            <textarea wire:model.live.debounce.300ms="content_id" class="form-control @error('content_id') is-invalid @enderror"
-                                rows="8" placeholder="Isi Artikel" maxlength="5000"></textarea>
+                            <div wire:ignore x-data="{
+                                initEditor() {
+                                    ClassicEditor
+                                        .create($refs.myEditor)
+                                        .then(editor => {
+                                            // Set data awal jika ada
+                                            editor.setData(@this.get('content_id') || '');
+                            
+                                            editor.model.document.on('change:data', () => {
+                                                @this.set('content_id', editor.getData());
+                                            });
+                                        })
+                                        .catch(error => console.error(error));
+                                }
+                            }" x-init="initEditor()">
+                                <textarea x-ref="myEditor" id="content_id" placeholder="Konten Indonesia" maxlength="5000">{!! $content_id !!}</textarea>
+                            </div>
+                            {{-- <textarea wire:model.live.debounce.300ms="content_id" class="form-control @error('content_id') is-invalid @enderror"
+                                rows="8" placeholder="Isi Artikel" maxlength="5000"></textarea> --}}
                             @error('content_id')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
@@ -168,9 +184,25 @@
                             @error('excerpt_en')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
-
-                            <textarea wire:model.live.debounce.300ms="content_en" class="form-control @error('content_en') is-invalid @enderror"
-                                rows="8" placeholder="Content" maxlength="5000"></textarea>
+                            <div wire:ignore x-data="{
+                                initEditor() {
+                                    ClassicEditor
+                                        .create($refs.myEditor)
+                                        .then(editor => {
+                                            // Set data awal jika ada
+                                            editor.setData(@this.get('content_en') || '');
+                            
+                                            editor.model.document.on('change:data', () => {
+                                                @this.set('content_en', editor.getData());
+                                            });
+                                        })
+                                        .catch(error => console.error(error));
+                                }
+                            }" x-init="initEditor()">
+                                <textarea x-ref="myEditor" id="content_en" placeholder="Content" maxlength="5000">{!! $content_en !!}</textarea>
+                            </div>
+                            {{-- <textarea wire:model.live.debounce.300ms="content_en" class="form-control @error('content_en') is-invalid @enderror"
+                                rows="8" placeholder="Content" maxlength="5000"></textarea> --}}
                             @error('content_en')
                                 <div class="text-danger">{{ $message }}</div>
                             @enderror
@@ -273,35 +305,41 @@
     </div>
 </div>
 
-<script>
-    window.addEventListener(
-        'showDeleteModal',
-        () => {
 
-            let modal =
-                new bootstrap.Modal(
-                    document.getElementById(
-                        'deleteModal'
+@script
+    <script>
+        window.addEventListener(
+            'showDeleteModal',
+            () => {
+
+                let modal =
+                    new bootstrap.Modal(
+                        document.getElementById(
+                            'deleteModal'
+                        )
+                    );
+
+                modal.show();
+
+            }
+        );
+
+        window.addEventListener(
+            'hideDeleteModal',
+            () => {
+
+                bootstrap.Modal
+                    .getInstance(
+                        document.getElementById(
+                            'deleteModal'
+                        )
                     )
-                );
+                    ?.hide();
 
-            modal.show();
-
-        }
-    );
-
-    window.addEventListener(
-        'hideDeleteModal',
-        () => {
-
-            bootstrap.Modal
-                .getInstance(
-                    document.getElementById(
-                        'deleteModal'
-                    )
-                )
-                ?.hide();
-
-        }
-    );
-</script>
+            }
+        );
+    </script>
+    <script>
+        paste_remove_styles: true;
+    </script>
+@endscript

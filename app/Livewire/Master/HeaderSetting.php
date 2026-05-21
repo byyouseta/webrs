@@ -13,18 +13,14 @@ class HeaderSetting extends Component
     use WithFileUploads;
 
     public $logo;
-
     public $currentLogo;
-
     public $hospital_name;
-
     public $location;
-
     public $maps_url;
-
     public $contact_center;
-
     public $spgdt_number;
+    public $hero_tagline_id;
+    public $hero_tagline_en;
 
     public function mount()
     {
@@ -63,6 +59,17 @@ class HeaderSetting extends Component
                 'key',
                 'hospital_logo'
             )->value('value');
+        $this->hero_tagline_id =
+            Setting::where(
+                'key',
+                'hero_tagline_id'
+            )->value('value');
+
+        $this->hero_tagline_en =
+            Setting::where(
+                'key',
+                'hero_tagline_en'
+            )->value('value');
     }
 
     public function save()
@@ -89,27 +96,20 @@ class HeaderSetting extends Component
         $settings = [
 
             'hospital_name' => $this->hospital_name,
-
             'location' => $this->location,
-
             'maps_url' => $this->maps_url,
-
             'contact_center' => $this->contact_center,
-
             'spgdt_number' => $this->spgdt_number,
-
-            'hospital_logo' => $logoPath
+            'hospital_logo' => $logoPath,
+            'hero_tagline_id' => $this->hero_tagline_id,
+            'hero_tagline_en' => $this->hero_tagline_en
 
         ];
 
         foreach ($settings as $key => $value) {
-
             Setting::updateOrCreate(
-
                 ['key' => $key],
-
                 ['value' => $value]
-
             );
         }
 

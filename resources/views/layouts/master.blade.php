@@ -5,6 +5,8 @@
     @include('backend.partials.head.head-meta')
     <title>Dasher Free - Responsive Bootstrap 5 Admin Dashboard</title>
     <link rel="stylesheet" href="{{ asset('backend/assets/css/swiper-bundle.min.css') }}" />
+
+
     @include('backend/partials/head/head-links')
     @livewireStyles
 </head>
@@ -38,6 +40,7 @@
     {{-- <script src="{{ asset('backend/assets/js/vendors/swiper.min.js') }}"></script> --}}
     {{-- <script src="{{ asset('backend/assets/js/vendors/swiper.js') }}"></script> --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
     @livewireScripts
 </body>
 

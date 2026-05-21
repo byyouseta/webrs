@@ -88,6 +88,31 @@
                             <img class="img-thumbnail mt-2" width="150" src="{{ Storage::url($currentLogo) }}">
                         @endif
                     </div>
+                    <div class="col-md-6">
+                        <label>
+                            Hero Tagline Indonesia
+                        </label>
+                        <input class="form-control @error('hero_tagline_id') is-invalid @enderror"
+                            wire:model="hero_tagline_id">
+                        @error('hero_tagline_id')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+
+                    <div class="col-md-6">
+                        <label>
+                            Hero Tagline English
+                        </label>
+                        <input class="form-control @error('hero_tagline_en') is-invalid @enderror"
+                            wire:model="hero_tagline_en">
+                        @error('hero_tagline_en')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
                 </div>
                 <button class="btn btn-success mt-4">
                     Simpan
