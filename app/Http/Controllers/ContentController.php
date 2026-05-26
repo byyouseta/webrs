@@ -35,4 +35,8 @@ class ContentController extends Controller
     {
         return view('backend.content.services');
     }
+    public function promotions()
+    {
+        return view('backend.content.promotions');
+    }
 }
