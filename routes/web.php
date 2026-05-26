@@ -27,6 +27,7 @@ Route::get('content/hero-shortcuts', [App\Http\Controllers\ContentController::cl
 Route::get('content/pages', [App\Http\Controllers\ContentController::class, 'pages'])->name('content.pages');
 Route::get('content/services', [App\Http\Controllers\ContentController::class, 'services'])->name('content.services');
 Route::get('content/promotions', [App\Http\Controllers\ContentController::class, 'promotions'])->name('content.promotions');
+Route::get('content/testimonials', [App\Http\Controllers\ContentController::class, 'testimonials'])->name('content.testimonials');
 
 Route::get('master/languages', [App\Http\Controllers\MasterController::class, 'languages'])->name('master.languages');
 Route::get('master/header', [App\Http\Controllers\MasterController::class, 'header'])->name('master.header');

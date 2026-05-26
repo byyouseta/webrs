@@ -39,4 +39,9 @@ class ContentController extends Controller
     {
         return view('backend.content.promotions');
     }
+
+    public function testimonials()
+    {
+        return view('backend.content.testimonials');
+    }
 }
