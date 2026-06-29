@@ -34,5 +34,9 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
+    'bridging' => [
+        'url' => env('BRIDGING_URL'),
+        'key' => env('BRIDGING_API_KEY'),
+    ],
 
 ];

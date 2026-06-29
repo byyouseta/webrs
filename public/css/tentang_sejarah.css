@@ -1,0 +1,234 @@
+/* HERO */
+
+.history-hero{
+
+    padding:100px 0;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #EAFBF8,
+        #FFFFFF
+    );
+}
+
+.history-badge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:#0E9F8D;
+
+    color:#fff;
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+.history-hero h1{
+
+    margin-top:20px;
+
+    font-size:56px;
+
+    font-weight:800;
+}
+
+.history-hero p{
+
+    max-width:850px;
+
+    margin:20px auto 0;
+
+    color:#6B7280;
+
+    line-height:1.9;
+}
+
+
+/* INTRO */
+
+.history-intro{
+
+    padding:70px 0;
+}
+
+.history-intro-card{
+
+    background:#fff;
+
+    padding:50px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.05);
+}
+
+.history-intro-card p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    color:#6B7280;
+
+    line-height:1.9;
+}
+
+
+/* TIMELINE */
+
+.history-timeline-section{
+
+    padding-bottom:100px;
+}
+
+.timeline{
+
+    position:relative;
+
+    max-width:1000px;
+
+    margin:auto;
+}
+
+.timeline::before{
+
+    content:'';
+
+    position:absolute;
+
+    left:140px;
+
+    top:0;
+
+    width:4px;
+
+    height:100%;
+
+    background:#0E9F8D;
+
+    border-radius:999px;
+}
+
+.timeline-item{
+
+    display:grid;
+
+    grid-template-columns:
+    100px 40px 1fr;
+
+    gap:30px;
+
+    align-items:flex-start;
+
+    margin-bottom:40px;
+}
+
+.timeline-year{
+
+    text-align:right;
+
+    font-size:28px;
+
+    font-weight:800;
+
+    color:#0E9F8D;
+}
+
+.timeline-dot{
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    background:#0E9F8D;
+
+    border:4px solid #EAFBF8;
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:10px;
+}
+
+.timeline-card{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:24px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.05);
+
+    transition:.3s;
+}
+
+.timeline-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.08);
+}
+
+.timeline-card h3{
+
+    margin-bottom:10px;
+}
+
+.timeline-card p{
+
+    color:#6B7280;
+
+    line-height:1.8;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .history-hero{
+
+        padding:70px 0;
+    }
+
+    .history-hero h1{
+
+        font-size:34px;
+    }
+
+    .timeline::before{
+
+        left:10px;
+    }
+
+    .timeline-item{
+
+        grid-template-columns:
+        20px 1fr;
+
+        gap:20px;
+    }
+
+    .timeline-year{
+
+        display:none;
+    }
+
+}

@@ -1,0 +1,306 @@
+/* HERO */
+
+.direksi-hero{
+
+    padding:100px 0;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #EAFBF8,
+        #FFFFFF
+    );
+}
+
+.direksi-badge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:#0E9F8D;
+
+    color:#fff;
+
+    font-size:12px;
+
+    font-weight:600;
+}
+
+.direksi-hero h1{
+
+    margin-top:20px;
+
+    font-size:56px;
+
+    font-weight:800;
+}
+
+.direksi-hero p{
+
+    max-width:850px;
+
+    margin:20px auto 0;
+
+    line-height:1.9;
+
+    color:#6B7280;
+}
+
+
+/* DIREKTUR UTAMA */
+
+.direktur-utama-section{
+
+    padding:80px 0;
+}
+
+.direktur-utama-card{
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    gap:40px;
+
+    align-items:center;
+
+    background:#fff;
+
+    border-radius:30px;
+
+    padding:40px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.05);
+}
+
+.direktur-foto img{
+
+    width:100%;
+
+    border-radius:24px;
+}
+
+.direktur-content span{
+
+    color:#0E9F8D;
+
+    font-weight:700;
+
+    font-size:13px;
+}
+
+.direktur-content h2{
+
+    margin-top:10px;
+
+    margin-bottom:15px;
+
+    font-size:34px;
+}
+
+.direktur-content p{
+
+    color:#6B7280;
+
+    line-height:1.9;
+}
+
+
+/* TITLE */
+
+.section-title-center{
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.section-title-center span{
+
+    color:#0E9F8D;
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+.section-title-center h2{
+
+    margin-top:10px;
+
+    font-size:40px;
+
+    font-weight:800;
+}
+
+
+/* DIREKSI */
+
+.direksi-list-section{
+
+    padding-bottom:80px;
+}
+
+.direksi-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:24px;
+}
+
+.direksi-card{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.05);
+
+    transition:.3s;
+}
+
+.direksi-card:hover{
+
+    transform:translateY(-5px);
+}
+
+.direksi-card img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+}
+
+.direksi-body{
+
+    padding:24px;
+
+    text-align:center;
+}
+
+.direksi-body h4{
+
+    min-height:60px;
+
+    font-size:18px;
+
+    line-height:1.5;
+
+    margin-bottom:12px;
+}
+
+.direksi-body p{
+
+    color:#0E9F8D;
+
+    font-weight:600;
+}
+
+
+/* DUTY */
+
+.direksi-duty{
+
+    padding-bottom:100px;
+}
+
+.duty-wrapper{
+
+    background:
+    linear-gradient(
+        135deg,
+        #0E9F8D,
+        #18B8A3
+    );
+
+    color:#fff;
+
+    padding:60px;
+
+    border-radius:30px;
+}
+
+.duty-wrapper h2{
+
+    text-align:center;
+
+    margin-bottom:30px;
+}
+
+.duty-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:18px;
+}
+
+.duty-grid div{
+
+    background:
+    rgba(255,255,255,.15);
+
+    padding:18px;
+
+    border-radius:16px;
+}
+
+.duty-grid i{
+
+    margin-right:8px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .direksi-hero{
+
+        padding:70px 0;
+    }
+
+    .direksi-hero h1{
+
+        font-size:34px;
+    }
+
+    .direktur-utama-card{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+    }
+
+    .direksi-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .duty-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .duty-wrapper{
+
+        padding:35px 24px;
+    }
+
+}
