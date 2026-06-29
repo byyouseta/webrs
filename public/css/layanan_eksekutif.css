@@ -1,0 +1,373 @@
+/* =========================
+   HERO
+========================= */
+
+.executive-hero{
+    position:relative;
+
+    min-height:650px;
+
+    display:flex;
+    align-items:center;
+
+    background-size:cover;
+    background-position:center;
+
+    color:#fff;
+}
+
+.executive-hero::before{
+    content:'';
+
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(62,47,34,.92),
+        rgba(62,47,34,.45)
+    );
+}
+
+.executive-content{
+    position:relative;
+    z-index:2;
+
+    max-width:650px;
+}
+
+.executive-label{
+    display:inline-block;
+
+    background:rgba(255,255,255,.15);
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    margin-bottom:20px;
+
+    font-size:12px;
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+
+.executive-content h1{
+    font-size:60px;
+    font-weight:800;
+
+    line-height:1.1;
+}
+
+.executive-content p{
+    margin-top:20px;
+
+    font-size:18px;
+
+    line-height:1.9;
+}
+
+.executive-btn{
+    display:inline-block;
+
+    margin-top:30px;
+
+    background:#A67C52;
+
+    color:#fff;
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.executive-about{
+    padding:90px 0;
+}
+
+.executive-about-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.executive-about-image img{
+    width:100%;
+
+    border-radius:28px;
+}
+
+.section-subtitle{
+    color:#A67C52;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+
+.executive-about-content h2{
+    margin:16px 0;
+
+    font-size:42px;
+
+    font-weight:800;
+
+    color:#3E2F22;
+}
+
+.executive-about-content p{
+    color:#6B7280;
+
+    line-height:1.9;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.section-title-center{
+    text-align:center;
+
+    margin-bottom:50px;
+}
+
+.section-title-center span{
+    color:#A67C52;
+
+    font-weight:700;
+}
+
+.section-title-center h2{
+    margin-top:12px;
+
+    font-size:42px;
+}
+
+/* =========================
+   BENEFIT
+========================= */
+
+.executive-benefit-section{
+    background:#F8F4EE;
+
+    padding:90px 0;
+}
+
+.executive-benefits{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+}
+
+.benefit-card{
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:32px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.05);
+}
+
+.benefit-card i{
+    font-size:38px;
+
+    color:#A67C52;
+}
+
+.benefit-card h5{
+    margin:16px 0 10px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.executive-gallery-section{
+    padding:90px 0;
+}
+
+.executive-gallery{
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:24px;
+}
+
+.executive-gallery img{
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:24px;
+}
+
+/* =========================
+   FACILITY
+========================= */
+
+.executive-facility{
+    background:#FAFAFA;
+
+    padding:90px 0;
+}
+
+.facility-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+.facility-grid div{
+    background:#fff;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    font-weight:600;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.executive-cta{
+    background:
+    linear-gradient(
+        135deg,
+        #8B6B3F,
+        #A67C52
+    );
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:90px 0;
+}
+
+.executive-cta h2{
+    font-size:46px;
+
+    margin-bottom:16px;
+}
+
+.executive-cta p{
+    max-width:700px;
+
+    margin:0 auto 30px;
+
+    line-height:1.9;
+}
+
+.executive-btn-light{
+    background:#fff;
+
+    color:#8B6B3F;
+
+    padding:14px 30px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:700;
+}
+.facility-grid div i{
+    color:#A67C52;
+
+    font-size:22px;
+
+    margin-right:10px;
+}
+
+.facility-grid div{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .executive-content h1{
+        font-size:36px;
+    }
+
+    .executive-about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .executive-benefits{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:12px;
+    }
+    .executive-benefit-section{
+        padding:50px 16px;
+    }
+    .benefit-card{
+        padding:18px 12px;
+    }
+
+    .benefit-card h5{
+        font-size:15px;
+    }
+
+    .benefit-card p{
+        font-size:12px;
+        line-height:1.5;
+    }
+
+    .benefit-card i{
+        font-size:28px;
+    }
+
+    .executive-gallery{
+        grid-template-columns:1fr;
+    }
+
+    .facility-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-title-center h2{
+        font-size:30px;
+    }
+
+}

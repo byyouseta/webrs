@@ -1,0 +1,283 @@
+/* HERO */
+
+.facility-hero{
+    padding:100px 0 120px;
+    text-align:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #EAFBF8,
+        #FFFFFF
+    );
+}
+
+.facility-badge{
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    background:rgba(14,159,141,.1);
+
+    color:#0E9F8D;
+
+    font-size:12px;
+    font-weight:700;
+}
+
+.facility-hero h1{
+    margin-top:20px;
+
+    font-size:56px;
+    font-weight:800;
+
+    max-width:900px;
+
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.facility-hero p{
+    margin-top:20px;
+
+    max-width:800px;
+
+    margin-left:auto;
+    margin-right:auto;
+
+    line-height:1.9;
+
+    color:#6B7280;
+}
+
+
+/* HIGHLIGHT */
+
+.facility-highlight{
+    margin-top:-60px;
+}
+
+.highlight-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+}
+
+.highlight-card{
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.05);
+}
+
+.highlight-card h4{
+    color:#0E9F8D;
+
+    font-size:34px;
+
+    font-weight:800;
+}
+
+
+/* GALERI */
+
+.facility-gallery{
+    padding:80px 0;
+}
+
+.facility-image{
+    width:100%;
+    height:500px;
+
+    object-fit:cover;
+
+    border-radius:28px;
+}
+
+
+/* DESKRIPSI */
+
+.facility-description{
+    padding:0 0 80px;
+
+    text-align:center;
+}
+
+.facility-description h2{
+    font-size:40px;
+    font-weight:800;
+
+    margin-bottom:20px;
+}
+
+.facility-description p{
+    max-width:900px;
+
+    margin:auto;
+
+    color:#6B7280;
+
+    line-height:1.9;
+}
+
+
+/* FASILITAS PUBLIK */
+
+.facility-public{
+    padding-bottom:90px;
+}
+
+.facility-list-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(5,1fr);
+
+    gap:18px;
+}
+
+.facility-list-grid div{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    text-align:center;
+
+    font-weight:600;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.05);
+}
+
+.facility-list-grid i{
+
+    display:block;
+
+    font-size:28px;
+
+    color:#0E9F8D;
+
+    margin-bottom:10px;
+}
+
+
+/* SERVICE */
+
+.facility-service{
+    padding-bottom:100px;
+}
+
+.service-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:24px;
+}
+
+.service-card{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.05);
+}
+
+.service-card i{
+
+    font-size:48px;
+
+    color:#0E9F8D;
+
+    margin-bottom:15px;
+}
+
+.service-card h4{
+
+    margin-bottom:12px;
+
+    font-weight:700;
+}
+
+.service-card p{
+
+    color:#6B7280;
+}
+
+
+/* SECTION TITLE */
+
+.section-title-center{
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.section-title-center span{
+
+    color:#0E9F8D;
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+.section-title-center h2{
+
+    margin-top:10px;
+
+    font-size:40px;
+
+    font-weight:800;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .facility-hero{
+        padding:70px 0 100px;
+    }
+
+    .facility-hero h1{
+        font-size:34px;
+    }
+
+    .facility-image{
+        height:220px;
+    }
+
+    .highlight-grid,
+    .facility-list-grid,
+    .service-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .section-title-center h2,
+    .facility-description h2{
+
+        font-size:28px;
+    }
+}

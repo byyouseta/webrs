@@ -1,0 +1,281 @@
+/* HERO */
+
+.patient-hero{
+
+    padding:100px 0;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #EAFBF8,
+        #FFFFFF
+    );
+}
+
+.patient-badge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:#0E9F8D;
+
+    color:#fff;
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+.patient-hero h1{
+
+    margin-top:20px;
+
+    font-size:54px;
+
+    font-weight:800;
+}
+
+.patient-hero p{
+
+    max-width:850px;
+
+    margin:20px auto 0;
+
+    color:#6B7280;
+
+    line-height:1.9;
+}
+
+
+/* INTRO */
+
+.patient-intro{
+
+    padding:80px 0 60px;
+}
+
+.intro-card{
+
+    background:#fff;
+
+    padding:50px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.05);
+}
+
+.intro-card i{
+
+    font-size:60px;
+
+    color:#0E9F8D;
+
+    margin-bottom:20px;
+}
+
+.intro-card h2{
+
+    margin-bottom:15px;
+}
+
+.intro-card p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    color:#6B7280;
+
+    line-height:1.9;
+}
+
+
+/* TITLE */
+
+.section-title-center{
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.section-title-center span{
+
+    color:#0E9F8D;
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+.section-title-center h2{
+
+    margin-top:10px;
+
+    font-size:40px;
+
+    font-weight:800;
+}
+
+
+/* HAK */
+
+.patient-rights{
+
+    padding-bottom:80px;
+}
+
+.rights-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:20px;
+}
+
+.right-card{
+
+    background:#fff;
+
+    padding:24px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:flex-start;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.05);
+}
+
+.right-card i{
+
+    color:#0E9F8D;
+
+    font-size:24px;
+
+    margin-top:3px;
+}
+
+
+/* KEWAJIBAN */
+
+.patient-obligation{
+
+    padding-bottom:80px;
+}
+
+.obligation-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:20px;
+}
+
+.obligation-card{
+
+    background:#fff;
+
+    padding:24px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:flex-start;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.05);
+}
+
+.obligation-card i{
+
+    color:#16A34A;
+
+    font-size:24px;
+
+    margin-top:3px;
+}
+
+
+/* CLOSING */
+
+.patient-closing{
+
+    padding-bottom:100px;
+}
+
+.closing-box{
+
+    background:
+    linear-gradient(
+        135deg,
+        #0E9F8D,
+        #18B8A3
+    );
+
+    color:#fff;
+
+    padding:60px;
+
+    border-radius:30px;
+
+    text-align:center;
+}
+
+.closing-box p{
+
+    max-width:850px;
+
+    margin:15px auto 0;
+
+    line-height:1.9;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .patient-hero{
+
+        padding:70px 0;
+    }
+
+    .patient-hero h1{
+
+        font-size:34px;
+    }
+
+    .rights-grid,
+    .obligation-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .intro-card,
+    .closing-box{
+
+        padding:35px 24px;
+    }
+
+}

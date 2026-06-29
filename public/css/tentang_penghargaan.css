@@ -1,0 +1,333 @@
+/* HERO */
+
+.award-hero{
+
+    padding:100px 0;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #FFF7E8,
+        #FFFFFF
+    );
+}
+
+.award-badge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:#D4A017;
+
+    color:#fff;
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+.award-hero h1{
+
+    margin-top:20px;
+
+    font-size:56px;
+
+    font-weight:800;
+}
+
+.award-hero p{
+
+    max-width:850px;
+
+    margin:20px auto 0;
+
+    color:#6B7280;
+
+    line-height:1.9;
+}
+
+
+/* STAT */
+
+.award-stat-section{
+
+    padding:70px 0;
+}
+
+.award-stat-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:20px;
+}
+
+.award-stat-card{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.05);
+}
+
+.award-stat-card h2{
+
+    color:#D4A017;
+
+    font-size:42px;
+
+    font-weight:800;
+}
+
+.award-stat-card p{
+
+    margin-top:10px;
+
+    color:#6B7280;
+}
+
+
+/* TITLE */
+
+.section-title-center{
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.section-title-center span{
+
+    color:#D4A017;
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+.section-title-center h2{
+
+    margin-top:10px;
+
+    font-size:40px;
+
+    font-weight:800;
+}
+
+
+/* AWARD GRID */
+
+.award-list-section{
+
+    padding-bottom:80px;
+}
+
+.award-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:24px;
+}
+
+.award-card{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.05);
+
+    transition:.3s;
+}
+
+.award-card:hover{
+
+    transform:translateY(-5px);
+}
+
+.award-icon{
+
+    width:80px;
+
+    height:80px;
+
+    margin:auto auto 20px;
+
+    border-radius:50%;
+
+    background:#FFF7E8;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+.award-icon i{
+
+    font-size:34px;
+
+    color:#D4A017;
+}
+
+.award-year{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    color:#D4A017;
+
+    font-weight:700;
+}
+
+.award-card p{
+
+    color:#6B7280;
+}
+
+
+/* TIMELINE */
+
+.award-timeline-section{
+
+    padding-bottom:80px;
+}
+
+.award-timeline{
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+.timeline-item{
+
+    display:flex;
+
+    gap:30px;
+
+    margin-bottom:30px;
+}
+
+.timeline-year{
+
+    min-width:90px;
+
+    font-weight:700;
+
+    color:#D4A017;
+}
+
+.timeline-content{
+
+    background:#fff;
+
+    padding:24px;
+
+    border-radius:20px;
+
+    flex:1;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.05);
+}
+
+.timeline-content p{
+
+    color:#6B7280;
+}
+
+
+/* CLOSING */
+
+.award-closing{
+
+    padding-bottom:100px;
+}
+
+.closing-card{
+
+    background:
+    linear-gradient(
+        135deg,
+        #D4A017,
+        #E5B93C
+    );
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:60px;
+
+    border-radius:30px;
+}
+
+.closing-card p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    margin-top:15px;
+
+    line-height:1.9;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .award-hero{
+
+        padding:70px 0;
+    }
+
+    .award-hero h1{
+
+        font-size:34px;
+    }
+
+    .award-stat-grid,
+    .award-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .timeline-item{
+
+        flex-direction:column;
+
+        gap:10px;
+    }
+
+    .closing-card{
+
+        padding:40px 24px;
+    }
+
+}

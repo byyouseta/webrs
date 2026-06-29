@@ -1,0 +1,313 @@
+/* HERO */
+
+.vm-hero{
+
+    padding:100px 0;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #EAFBF8,
+        #FFFFFF
+    );
+}
+
+.vm-badge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:#0E9F8D;
+
+    color:#fff;
+
+    font-size:12px;
+
+    font-weight:600;
+}
+
+.vm-hero h1{
+
+    margin-top:20px;
+
+    font-size:56px;
+
+    font-weight:800;
+}
+
+.vm-hero p{
+
+    max-width:800px;
+
+    margin:20px auto 0;
+
+    color:#6B7280;
+
+    line-height:1.9;
+}
+
+
+/* VISI */
+
+.visi-section{
+
+    padding:80px 0 50px;
+}
+
+.visi-card{
+
+    background:#fff;
+
+    border-radius:30px;
+
+    padding:60px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.05);
+}
+
+.visi-icon{
+
+    width:90px;
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#EAFBF8;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:20px;
+}
+
+.visi-icon i{
+
+    font-size:40px;
+
+    color:#0E9F8D;
+}
+
+.visi-card h2{
+
+    margin-bottom:20px;
+}
+
+.visi-card p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:1.9;
+}
+
+
+/* TITLE */
+
+.section-title-center{
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.section-title-center span{
+
+    color:#0E9F8D;
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+.section-title-center h2{
+
+    margin-top:10px;
+
+    font-size:40px;
+
+    font-weight:800;
+}
+
+
+/* MISI */
+
+.misi-section{
+
+    padding:20px 0 80px;
+}
+
+.misi-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:24px;
+}
+
+.misi-card{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:24px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.05);
+}
+
+.misi-card span{
+
+    font-size:32px;
+
+    font-weight:800;
+
+    color:#0E9F8D;
+}
+
+.misi-card p{
+
+    margin-top:10px;
+
+    color:#6B7280;
+
+    line-height:1.8;
+}
+
+
+/* NILAI */
+
+.nilai-section{
+
+    padding-bottom:80px;
+}
+
+.nilai-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:20px;
+}
+
+.nilai-card{
+
+    background:#fff;
+
+    padding:24px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.05);
+}
+
+.nilai-card h4{
+
+    color:#0E9F8D;
+
+    margin-bottom:10px;
+}
+
+.nilai-card p{
+
+    color:#6B7280;
+
+    font-size:14px;
+
+    line-height:1.7;
+}
+
+
+/* CLOSING */
+
+.vm-closing{
+
+    padding-bottom:100px;
+}
+
+.closing-card{
+
+    background:
+    linear-gradient(
+        135deg,
+        #0E9F8D,
+        #18B8A3
+    );
+
+    color:#fff;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    padding:60px;
+}
+
+.closing-card h2{
+
+    margin-bottom:15px;
+}
+
+.closing-card p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    line-height:1.9;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .vm-hero h1{
+
+        font-size:34px;
+    }
+
+    .visi-card{
+
+        padding:30px 20px;
+    }
+
+    .misi-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .nilai-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .closing-card{
+
+        padding:40px 24px;
+    }
+
+}

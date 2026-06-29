@@ -1,0 +1,491 @@
+/* =========================
+   HERO
+========================= */
+
+.diklit-hero{
+    padding:90px 0;
+
+    background:
+    linear-gradient(
+        135deg,
+        #EAFBF8,
+        #FFFFFF
+    );
+}
+
+.diklit-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.diklit-label{
+    display:inline-block;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    background:
+    rgba(14,159,141,.10);
+
+    color:#0E9F8D;
+
+    font-size:12px;
+    font-weight:700;
+
+    letter-spacing:.5px;
+}
+
+.diklit-content h1{
+    margin-top:18px;
+
+    font-size:54px;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+    color:#111827;
+}
+
+.diklit-content p{
+    margin-top:18px;
+
+    color:#6B7280;
+
+    line-height:1.9;
+}
+
+.diklit-image img{
+    width:100%;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.diklit-about{
+    padding:80px 0;
+}
+
+.diklit-desc{
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    color:#6B7280;
+
+    line-height:1.9;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.section-title-center{
+    text-align:center;
+
+    margin-bottom:50px;
+}
+
+.section-title-center span{
+    color:#0E9F8D;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+
+.section-title-center h2{
+    margin-top:10px;
+
+    font-size:40px;
+
+    font-weight:800;
+
+    color:#111827;
+}
+
+
+/* =========================
+   RESEARCH TYPE
+========================= */
+
+.research-types{
+    padding:80px 0;
+
+    background:#F9FAFB;
+}
+
+.research-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:24px;
+}
+
+.research-card{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:32px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.05);
+
+    transition:.3s ease;
+}
+
+.research-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 15px 30px rgba(0,0,0,.08);
+}
+
+.research-card i{
+
+    font-size:42px;
+
+    color:#0E9F8D;
+
+    margin-bottom:18px;
+}
+
+.research-card h4{
+
+    margin-bottom:10px;
+
+    font-weight:700;
+}
+
+.research-card p{
+
+    color:#6B7280;
+
+    line-height:1.7;
+
+    margin:0;
+}
+
+/* =========================
+   RESEARCH PROCESS
+========================= */
+
+.research-process{
+    padding:80px 0;
+    background:#F9FAFB;
+}
+
+.process-wrapper{
+    max-width:1000px;
+    margin:auto;
+}
+
+.process-item{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    margin-bottom:24px;
+}
+
+.process-step{
+
+    width:90px;
+    height:90px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0E9F8D,
+        #55C7B7
+    );
+
+    color:#fff;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+}
+
+.process-step span{
+    font-size:11px;
+    font-weight:600;
+}
+
+.process-step strong{
+    font-size:26px;
+    line-height:1;
+}
+
+.process-item:not(:last-child)
+.process-step::after{
+
+    content:'';
+
+    position:absolute;
+
+    top:90px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:3px;
+    height:45px;
+
+    background:#0E9F8D;
+}
+
+.process-card{
+
+    flex:1;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:24px 28px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.06);
+}
+
+.process-card h4{
+
+    color:#0E9F8D;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+}
+
+.process-card p{
+
+    margin:0;
+
+    color:#6B7280;
+
+    line-height:1.8;
+}
+
+/* =========================
+   REQUIREMENTS
+========================= */
+
+.research-requirements{
+
+    padding:80px 0;
+
+    background:#F9FAFB;
+}
+
+.requirement-box{
+
+    background:#fff;
+
+    padding:40px;
+
+    border-radius:24px;
+
+    max-width:900px;
+
+    margin:auto;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.05);
+}
+
+.requirement-box ul{
+
+    margin:0;
+    padding-left:22px;
+}
+
+.requirement-box li{
+
+    margin-bottom:14px;
+
+    color:#374151;
+
+    line-height:1.8;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.diklit-contact{
+    padding:80px 0;
+}
+
+.diklit-contact-card{
+
+    background:
+    linear-gradient(
+        135deg,
+        #0E9F8D,
+        #17B6A1
+    );
+
+    color:#fff;
+
+    border-radius:28px;
+
+    padding:50px;
+}
+
+.diklit-contact-card h2{
+
+    font-size:38px;
+
+    font-weight:800;
+
+    margin-bottom:15px;
+}
+
+.diklit-contact-card p{
+
+    max-width:700px;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+}
+
+.contact-list{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:18px;
+}
+
+.contact-list div{
+
+    background:
+    rgba(255,255,255,.12);
+
+    padding:18px 22px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+}
+
+.contact-list i{
+
+    font-size:18px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .diklit-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .diklit-content{
+        text-align:center;
+        order:2;
+    }
+
+    .diklit-image{
+        order:1;
+    }
+
+    .diklit-content h1{
+        font-size:34px;
+    }
+
+    .section-title-center h2{
+        font-size:28px;
+    }
+
+    .research-grid{
+        grid-template-columns:1fr;
+    }
+
+    .requirement-box{
+        padding:24px;
+    }
+
+    .diklit-contact-card{
+        padding:30px 24px;
+    }
+
+    .diklit-contact-card h2{
+        font-size:28px;
+    }
+
+    .contact-list{
+        grid-template-columns:1fr;
+    }
+}
+@media(max-width:768px){
+
+    .process-item{
+        gap:14px;
+        align-items:flex-start;
+    }
+
+    .process-step{
+
+        width:70px;
+        height:70px;
+    }
+
+    .process-step strong{
+        font-size:20px;
+    }
+
+    .process-card{
+        padding:18px;
+    }
+
+    .process-card h4{
+        font-size:16px;
+    }
+
+    .process-card p{
+        font-size:13px;
+        line-height:1.7;
+    }
+
+}

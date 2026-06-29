@@ -1,0 +1,291 @@
+/* HERO */
+
+.dewas-hero{
+
+    padding:100px 0;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #EAFBF8,
+        #FFFFFF
+    );
+}
+
+.dewas-badge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:#0E9F8D;
+
+    color:#fff;
+
+    font-size:12px;
+
+    font-weight:600;
+}
+
+.dewas-hero h1{
+
+    margin-top:20px;
+
+    font-size:56px;
+
+    font-weight:800;
+}
+
+.dewas-hero p{
+
+    max-width:800px;
+
+    margin:20px auto 0;
+
+    color:#6B7280;
+
+    line-height:1.9;
+}
+
+
+/* KETUA */
+
+.dewas-section{
+
+    padding:80px 0 40px;
+}
+
+.dewas-chief{
+
+    text-align:center;
+
+    max-width:400px;
+
+    margin:auto;
+}
+
+.dewas-photo{
+
+    width:140px;
+
+    height:140px;
+
+    border-radius:50%;
+
+    background:#EAFBF8;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+.dewas-photo i{
+
+    font-size:55px;
+
+    color:#0E9F8D;
+}
+
+.dewas-chief h3{
+
+    margin-top:20px;
+}
+
+.dewas-chief span{
+
+    color:#6B7280;
+}
+
+
+/* TITLE */
+
+.section-title-center{
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.section-title-center span{
+
+    color:#0E9F8D;
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+.section-title-center h2{
+
+    margin-top:10px;
+
+    font-size:40px;
+
+    font-weight:800;
+}
+
+
+/* MEMBER */
+
+.dewas-member-section{
+
+    padding-bottom:80px;
+}
+
+.dewas-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:24px;
+}
+
+.dewas-card{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.05);
+
+    transition:.3s;
+}
+
+.dewas-card:hover{
+
+    transform:translateY(-5px);
+}
+
+.dewas-avatar{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    background:#EAFBF8;
+
+    margin:auto auto 20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+.dewas-avatar i{
+
+    color:#0E9F8D;
+
+    font-size:30px;
+}
+
+.dewas-card h4{
+
+    margin-bottom:10px;
+}
+
+.dewas-card p{
+
+    color:#6B7280;
+}
+
+
+/* DUTY */
+
+.dewas-duty{
+
+    padding-bottom:100px;
+}
+
+.duty-box{
+
+    background:
+    linear-gradient(
+        135deg,
+        #0E9F8D,
+        #18B8A3
+    );
+
+    color:#fff;
+
+    padding:60px;
+
+    border-radius:30px;
+}
+
+.duty-box h2{
+
+    text-align:center;
+
+    margin-bottom:30px;
+}
+
+.duty-list{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:20px;
+}
+
+.duty-list div{
+
+    background:
+    rgba(255,255,255,.12);
+
+    padding:18px;
+
+    border-radius:16px;
+}
+
+.duty-list i{
+
+    margin-right:8px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .dewas-hero h1{
+
+        font-size:34px;
+    }
+
+    .dewas-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .duty-list{
+
+        grid-template-columns:1fr;
+    }
+
+    .duty-box{
+
+        padding:40px 24px;
+    }
+
+}

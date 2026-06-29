@@ -1,0 +1,287 @@
+/* =========================
+   HEADER
+========================= */
+
+.tarif-diklat{
+    padding:80px 0;
+}
+
+.tarif-header{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-badge{
+    display:inline-block;
+
+    background:
+    rgba(14,159,141,.1);
+
+    color:#0E9F8D;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:12px;
+    font-weight:700;
+}
+
+.tarif-header h1{
+    margin-top:16px;
+
+    font-size:42px;
+
+    font-weight:800;
+}
+
+.tarif-header p{
+    max-width:800px;
+
+    margin:15px auto 0;
+
+    color:#6B7280;
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.tarif-search{
+    margin-bottom:25px;
+}
+
+.tarif-search input{
+
+    width:100%;
+
+    padding:16px 20px;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:12px;
+
+    outline:none;
+}
+
+.tariff-search{
+
+    margin-bottom:25px;
+}
+
+.tariff-search input{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:14px 18px;
+
+    background:#F3F4F6;
+
+    outline:none;
+}
+
+.tariff-table{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.05);
+}
+.tariff-table thead th{
+
+    background:#0E9F8D !important;
+
+    color:#fff !important;
+
+    border-color:#0E9F8D !important;
+
+    text-align:center;
+
+    vertical-align:middle;
+
+    font-weight:600;
+}
+.tariff-table thead{
+
+    background:#0E9F8D;
+
+    color:#fff;
+}
+
+.table-category{
+
+    background:
+    rgba(14,159,141,.10);
+
+    font-weight:700;
+}
+/* =========================
+   TABLE
+========================= */
+
+.table-wrapper{
+
+    overflow-x:auto;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.05);
+}
+
+#tarifTable{
+
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+#tarifTable th{
+
+    background:#0E9F8D;
+
+    color:#fff;
+
+    padding:16px;
+
+    text-align:left;
+}
+
+#tarifTable td{
+
+    padding:16px;
+
+    border-bottom:1px solid #F3F4F6;
+}
+
+#tarifTable tr:hover{
+
+    background:#F9FAFB;
+}
+
+
+/* =========================
+   PAYMENT
+========================= */
+
+.payment-section{
+
+    padding-bottom:40px;
+}
+
+.payment-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.05);
+}
+
+.payment-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+}
+
+
+/* =========================
+   CONFIRMATION
+========================= */
+
+.confirmation-section{
+
+    padding-bottom:80px;
+}
+
+.confirmation-card{
+
+    background:
+    linear-gradient(
+        135deg,
+        #0E9F8D,
+        #17B6A1
+    );
+
+    color:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+}
+
+.confirmation-card ul{
+
+    margin-top:20px;
+}
+
+.rekening-copy{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin-top:6px;
+}
+
+.copy-btn{
+
+    border:none;
+
+    background:#7a7a7aa7;
+
+    color:#fff;
+
+    padding:8px 10px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:11px;
+
+    transition:.3s;
+}
+
+.copy-btn:hover{
+
+    background:#2fe2cd;
+}
+@media(max-width:768px){
+
+    .tarif-header h1{
+        font-size:30px;
+    }
+
+    .payment-grid{
+        grid-template-columns:1fr;
+    }
+
+    .payment-card,
+    .confirmation-card{
+        padding:24px;
+    }
+
+}

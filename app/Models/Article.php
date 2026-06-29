@@ -19,9 +19,21 @@ class Article extends Model
         'updated_by',
     ];
 
-    public function translations()
+      public function translations()
     {
-        return $this->hasMany(ArticleTranslation::class);
+        return $this->hasMany(
+            ArticleTranslation::class
+        );
+    }
+
+    public function translation()
+    {
+        return $this->hasOne(
+            ArticleTranslation::class
+        )->where(
+            'locale',
+            app()->getLocale()
+        );
     }
 
     public function getActivitylogOptions(): LogOptions

@@ -1,0 +1,429 @@
+/* =========================
+   HERO FINAL CLEAN STABLE
+========================= */
+  /* HERO */
+
+@media(max-width:768px){
+
+  .hero-inner{
+    padding:0 20px;
+  }
+
+}
+  .hero{
+  position:relative;
+
+  padding-top:0;
+
+  padding-bottom:120px;
+
+  background:#f8f9fa;
+}
+
+  .hero-content {
+    position: relative;
+    top: auto;
+    transform: none;
+  }
+
+  .hero-title {
+    font-size: 28px;
+    line-height: 130%;
+  }
+
+  .hero-desc {
+    font-size: 14px;
+  }
+
+  /* SEARCH */
+  .search-box input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  /* HERO MENU (CARD) */
+  .hero-menu {
+    position: relative;
+    bottom: auto;
+    margin-top: 20px;
+  }
+
+  .hero-menu .row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-menu .col-md-2 {
+    width: 100%;
+  }
+
+  .menu-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+.hero {
+  position: relative;
+  min-height: 720px;
+  padding-bottom: 120px; /* ruang untuk hero-action */
+}
+
+/* BACKGROUND */
+.hero-bg {
+  height: 650px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* SLIDER FIX */
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: 650px;
+}
+
+/* OVERLAY */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(8, 180, 117, 0.58),
+    rgba(132, 198, 19, 0)
+  );
+  z-index: 1;
+}
+
+/* CONTENT */
+.hero-content {
+  position: absolute;
+  top: 25%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+/* TEXT */
+.hero-left {
+  max-width: 550px;
+  color: #1f1f1f;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.hero-desc {
+  margin-top: 10px;
+}
+
+/* INDICATOR */
+.hero-indicator {
+  margin-top: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.hero-indicator span {
+  width: 30px;
+  height: 4px;
+  background: rgba(255,255,255,0.5);
+}
+
+.hero-indicator .active {
+  background: #fff;
+  width: 40px;
+}
+
+/* =========================
+   HERO ACTION (SEARCH + MENU)
+========================= */
+
+.hero-action {
+  position: relative; /* penting: jangan absolute */
+  margin-top: -60px;  /* efek naik */
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* =========================
+   SEARCH
+========================= */
+/* CARD */
+.search-card{
+    background:#ffffff;
+    padding:18px;
+    border-radius:20px;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+    width:100%;
+    height : 120px;
+}
+
+/* TITLE */
+.search-title{
+    font-size:14px;
+    font-weight:700;
+    color:#5D6B82;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+
+/* INPUT GROUP */
+.search-wrapper{
+    display:flex;
+    align-items:center;
+    height:51px;
+    background:#F5F7FA;
+    border:1px solid #D9E1EA;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+/* ICON KIRI */
+.search-icon{
+    width:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#98A2B3;
+    font-size:18px;
+    flex-shrink:0;
+}
+
+/* INPUT */
+.search-wrapper input{
+    flex:1;
+    height:100%;
+    border:none;
+    outline:none;
+    background:transparent;
+    padding:0;
+    font-size:16px;
+    color:#344054;
+}
+
+.search-wrapper input::placeholder{
+    color:#667085;
+}
+
+/* BUTTON */
+.search-btn{
+    width:62px;
+    height:51px;
+    border:none;
+    outline:none;
+    background:#10B4A3;
+    color:#ffffff;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+    transition:.3s;
+}
+
+.search-btn:hover{
+    background:#0E9F8D;
+}
+
+/* MENU */
+.menu-list {
+  display: flex;
+  gap: 16px;
+}
+
+/* CARD */
+.menu-card {
+  position: relative;
+  width: 140px;
+  height: 120px;
+  background: #fff;
+  border-radius: 18px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+
+/* SHAPE */
+.menu-card::after{
+  content: '';
+
+  position: absolute;
+
+  width: 90px;
+  height: 90px;
+
+  background: rgba(14,159,141,0.10);
+
+  border-radius: 30px;
+
+  top: -45px;
+  left: -45px;
+}
+
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+
+.menu-card i {
+  position: relative;
+  z-index: 2;
+
+  font-size: 20px;
+  color: #0E9F8D;
+  margin-bottom: 6px;
+}
+
+
+.menu-card p {
+  position: relative;
+  z-index: 2;
+
+  font-size: 13px;
+  margin: 0;
+  text-align: center;
+
+  font-weight: 600;
+  color: #333;
+}
+
+
+.menu-card.mcu::after{
+  background: rgba(59,130,246,0.10);
+}
+
+.menu-card.promo::after{
+  background: rgba(239,68,68,0.10);
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+  background: #F9FAFB;
+  padding-top: 80px;
+}
+.hero-inner{
+  width:100%;
+
+  max-width:1440px;
+
+  margin:0 auto;
+
+  padding-left:120px;
+
+  padding-right:60px;
+}
+
+
+/* =========================
+   MOBILE HERO FIX
+========================= */
+/* MOBILE */
+@media(max-width:768px){
+
+  /* HIDE HERO CAROUSEL */
+  #heroCarousel,
+  .hero-overlay{
+    display:none;
+  }
+
+
+  /* RESET HERO */
+  .hero{
+    min-height:auto;
+
+    padding-top:20px;
+
+    padding-bottom:30px;
+
+    background:#f8f9fa;
+  }
+
+
+  /* CONTENT */
+  .hero-content{
+    position:relative;
+
+    top:auto;
+
+    transform:none;
+
+    margin-top:0;
+
+    padding:0 0px;
+  }
+
+
+  /* TEXT CARD */
+.hero-left{
+  width:100%;
+
+  border-radius:20px;
+}
+
+
+  /* HERO ACTION */
+  .hero-action{
+    margin-top:14px;
+
+    padding:0 16px;
+  }
+
+ .hero-title{
+  font-size:24px;
+
+  line-height:1.25;
+}
+.hero-title br{
+  display:none;
+}
+.menu-list{
+  width:100%;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:10px;
+}
+.menu-card{
+  width:100%;
+
+  height:90px;
+}
+ .hero-action{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+  }
+
+.hero-inner{
+  width:100%;
+  margin:5 auto;
+  padding-left:15px;
+  padding-right:15px;
+}
+
+
+}
+
