@@ -208,7 +208,7 @@
 
                 </a>
 
-                <a href="#"
+                <a href="{{ asset('storage/ppid/SKM_2025.pdf') }}"
                    target="_blank"
                    class="btn-skm-outline">
 

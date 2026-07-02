@@ -165,7 +165,7 @@
         <div class="pdf-preview-card">
 
             <iframe
-                src="{{ asset('storage/ppid/20260618174856SK_STANDAR_PELAYANAN.pdf') }}"
+                src="{{ asset('storage/ppid/20260626091248SK_STANDAR_PELAYANAN.pdf') }}"
                 width="100%"
                 height="900"
                 frameborder="0">
@@ -193,7 +193,7 @@
                 Unduh dokumen Standar Pelayanan RSUP Surakarta.
             </p>
 
-            <a href="{{ asset('storage/ppid/20260618174856SK_STANDAR_PELAYANAN.pdf') }}"
+            <a href="{{ asset('storage/ppid/20260626091248SK_STANDAR_PELAYANAN.pdf') }}"
                target="_blank"
                class="btn-download">
 

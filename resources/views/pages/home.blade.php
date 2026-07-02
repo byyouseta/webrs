@@ -549,7 +549,7 @@
                 <span class="arrow">→</span>
             </a>
 
-            <a href="https://gate.rsupsurakarta.id/survei/kepuasan" class="feedback-item" target="_blank">
+            <a href="https://gate.rsupsurakarta.id/survei/pengaduan" class="feedback-item" target="_blank">
                 <i class="bi bi-chat-dots"></i>
 
                 <div class="feedback-text">
@@ -560,7 +560,7 @@
                 <span class="arrow">→</span>
             </a>
 
-            <a href="https://gate.rsupsurakarta.id/survei/pengaduan" class="feedback-item" target="_blank">
+            <a href="https://lapor.go.id" class="feedback-item" target="_blank">
                 <i class="bi bi-megaphone"></i>
 
                 <div class="feedback-text">

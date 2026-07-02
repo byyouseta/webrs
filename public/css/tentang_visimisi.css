@@ -249,37 +249,57 @@
 }
 
 .closing-card{
-
-    background:
-    linear-gradient(
-        135deg,
-        #0E9F8D,
-        #18B8A3
-    );
-
-    color:#fff;
-
-    text-align:center;
-
-    border-radius:30px;
-
-    padding:60px;
+    background: linear-gradient(135deg, #d4a017, #f2c94c);
+    padding: 60px 30px;
+    border-radius: 25px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-.closing-card h2{
-
-    margin-bottom:15px;
+/* Judul utama */
+.closing-title{
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
 }
 
-.closing-card p{
-
-    max-width:800px;
-
-    margin:auto;
-
-    line-height:1.9;
+/* Sub judul */
+.closing-sub{
+    font-size: 16px;
+    opacity: 0.9;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
 }
 
+/* Deskripsi */
+.closing-desc{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Tagline Jawa */
+.closing-tagline{
+    font-size: 16px;
+    font-style: italic;
+    opacity: 0.85;
+    position: relative;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+/* Garis kecil elegan */
+.closing-tagline::before{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #fff;
+    margin: 0 auto 10px;
+    opacity: 0.7;
+}
 
 /* MOBILE */
 

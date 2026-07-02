@@ -48,15 +48,23 @@
 
             <p class="maklumat-text">
 
-                Dengan ini kami menyatakan sanggup menyelenggarakan
-                pelayanan sesuai standar pelayanan yang telah ditetapkan
-                dan apabila tidak menepati janji tersebut kami siap
-                menerima sanksi sesuai peraturan perundang-undangan
-                yang berlaku.
+                Dengan ini kami, pegawai di lingkungan rumah sakit umum pusat surakarta berjanji dan sanggup melaksanakan pelayanan
+                sesuai dengan standar pelayanan, memberikan pelayanan sesuai kewajiban dan akan melakukan perbaikan secara terus-menerus,
+                serta bersedia menerima sanksi dan/atau memberikan kompensasi apabila pelayanan yang diberikan tidak sesuai standar.
 
             </p>
+              <div class="signature-space">
+                    <span>Plt. Direktur Utama RSUP Surakarta</span><br>
+                <strong>
+                    dr. Sutanto
+                </strong>
+
+            </div>
+
+
 
         </div>
+
 
     </div>
 
@@ -117,7 +125,7 @@
 
 </section>
 
-
+<!--
 <section class="maklumat-signature">
 
     <div class="container-custom">
@@ -133,18 +141,12 @@
                 kesehatan bagi masyarakat.
             </p>
 
-            <div class="signature-space">
 
-                <strong>
-                    dr. Sutanto
-                </strong>
-
-            </div>
 
         </div>
 
     </div>
 
-</section>
+</section> -->
 
 @endsection

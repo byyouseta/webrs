@@ -163,6 +163,8 @@
     align-items:center;
 
     gap:18px;
+    width: 100%;
+    min-width: 0; /* 🔥 penting banget */
 }
 
 .stat-card i{

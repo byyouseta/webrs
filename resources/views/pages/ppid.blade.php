@@ -101,36 +101,57 @@
 
                 <tbody>
                     <tr data-category="dokumen">
-                        <td>1</td>
+                        <td>7</td>
+                        <td>Rencana Umum Pengadaan 2026</td>
+                        <td>
+                            <span class="kategori dokumen">
+                                Dokumen
+                            </span>
+                        </td>
+                        <td>09 Februari 2026</td>
+                        <td>
+                            <a href="{{ asset('storage/ppid/RENCANA_UMUM_PENGADAAN_2026.pdf') }}" class="btn-download" target="_blank">
+                                Download
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{ asset('storage/ppid/RENCANA_UMUM_PENGADAAN_2026.pdf') }}" class="btn-preview" target="_blank">
+                                View
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr data-category="dokumen">
+                        <td>6</td>
                         <td>Standar Pelayanan RSUP Surakarta 2026</td>
                         <td>
                             <span class="kategori dokumen">
                                 Dokumen
                             </span>
                         </td>
-                        <td>19 Juni 2026</td>
+                        <td>18 Mei 2026</td>
                         <td>
-                            <a href="{{ asset('storage/ppid/20260618174856SK_STANDAR_PELAYANAN.pdf') }}" class="btn-download" target="_blank">
+                            <a href="{{ asset('storage/ppid/20260626091248SK_STANDAR_PELAYANAN.pdf') }}" class="btn-download" target="_blank">
                                 Download
                             </a>
                         </td>
                         <td>
-                            <a href="{{ asset('storage/ppid/20260618174856SK_STANDAR_PELAYANAN.pdf') }}" class="btn-preview" target="_blank">
+                            <a href="{{ asset('storage/ppid/20260626091248SK_STANDAR_PELAYANAN.pdf') }}" class="btn-preview" target="_blank">
                                 View
                             </a>
                         </td>
                     </tr>
 
 
-                <tr data-category="dokumen">
-                        <td>2</td>
+                    <tr data-category="dokumen">
+                        <td>5</td>
                         <td>Rencana Strategi Bisnis 2025-2029 RSUP Surakarta</td>
                         <td>
                             <span class="kategori dokumen">
                                 Dokumen
                             </span>
                         </td>
-                        <td>10 Desember 2025</td>
+                        <td>10 Juli 2025</td>
                         <td>
                             <a href="{{ asset('storage/ppid/Rencana_Strategis_Bisnis_RSUP_Surakarta_2025-2029_fixx.pdf') }}" class="btn-download" target="_blank">
                                 Download
@@ -143,10 +164,52 @@
                         </td>
                     </tr>
 
+                    <tr data-category="berkala">
+                        <td>4</td>
+                        <td>LAKIP 2025 RSUP Surakarta</td>
+                        <td>
+                            <span class="kategori berkala">
+                                Berkala
+                            </span>
+                        </td>
+                        <td>30 Januari 2026</td>
+                        <td>
+                            <a href="{{ asset('storage/ppid/LAKIP_Tahun_2025_TTE.pdf') }}" class="btn-download" target="_blank">
+                                Download
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{ asset('storage/ppid/LAKIP_Tahun_2025_TTE.pdf') }}" class="btn-preview" target="_blank">
+                                View
+                            </a>
+                        </td>
+                    </tr>
 
 
                     <tr data-category="berkala">
                         <td>3</td>
+                        <td>Rencana Kerja dan Anggaran Tahun 2025 RSUP Surakarta</td>
+                        <td>
+                            <span class="kategori berkala">
+                                Berkala
+                            </span>
+                        </td>
+                        <td>10 Januari 2025</td>
+                        <td>
+                            <a href="{{ asset('storage/ppid/RINCIAN_KERTAS_KERJA_RSUP_SURAKARTA.pdf') }}" class="btn-download" target="_blank">
+                                Download
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{ asset('storage/ppid/RINCIAN_KERTAS_KERJA_RSUP_SURAKARTA.pdf') }}" class="btn-preview" target="_blank">
+                                View
+                            </a>
+                        </td>
+                    </tr>
+
+
+                    <tr data-category="berkala">
+                        <td>2</td>
                         <td>LAKIP Semester I 2025 RSUP Surakarta</td>
                         <td>
                             <span class="kategori berkala">
@@ -167,7 +230,7 @@
                     </tr>
 
                     <tr data-category="dokumen">
-                        <td>4</td>
+                        <td>1</td>
                         <td>Laporan Tahunan 2024 RSUP Surakarta</td>
                         <td>
                             <span class="kategori dokumen">
