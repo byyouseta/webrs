@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class InformasiController extends Controller
 {
@@ -17,81 +18,49 @@ class InformasiController extends Controller
     public function bed()
     {
 
-        $ruangan = [
+       $response = Http::withoutVerifying()
+            ->withHeaders([
+                'X-API-KEY' => config('services.bridging.key')
+            ])
+            ->get(config('services.bridging.url') . '/rooms');
 
-                [
-                    'nama'   => 'SEMBADRA',
-                    'kelas'  => '-',
-                    'total'  => 'N/A',
-                    'isi'    => 'N/A',
-                    'kosong' => 'N/A'
-                ],
+            if (!$response->successful()) {
+                abort(500, 'API Error');
+            }
 
-                [
-                    'nama'   => 'SADEWA INFEKSI',
-                    'kelas'  => '-',
-                    'total'  => 'N/A',
-                    'isi'    => 'N/A',
-                    'kosong' => 'N/A'
-                ],
+            $raw = collect($response->json('data'))
+            ->filter(function ($item) {
+                return (int) $item['statusdata'] === 1;
+            });
+        //dd($raw);
 
-                [
-                    'nama'   => 'SADEWA 2',
-                    'kelas'  => '-',
-                    'total'  => 'N/A',
-                    'isi'    => 'N/A',
-                    'kosong' => 'N/A'
-                ],
+        $ruangan = $raw->groupBy('nm_bangsal')->map(function ($items) {
 
-                [
-                    'nama'   => 'NAKULA ISOLASI',
-                    'kelas'  => '-',
-                    'total'  => 'N/A',
-                    'isi'    => 'N/A',
-                    'kosong' => 'N/A'
-                ],
+        $total = $items->count();
 
-                [
-                    'nama'   => 'NAKULA 2',
-                    'kelas'  => '-',
-                    'total'  => 'N/A',
-                    'isi'    => 'N/A',
-                    'kosong' => 'N/A'
-                ],
+        $kosong = $items->where('status', 'KOSONG')->count();
 
-                [
-                    'nama'   => 'ICU',
-                    'kelas'  => '-',
-                    'total'  => 'N/A',
-                    'isi'    => 'N/A',
-                    'kosong' => 'N/A'
-                ],
+        $isi = $items->whereNotIn('status', ['KOSONG'])->count();
 
-                [
-                    'nama'   => 'HCU',
-                    'kelas'  => '-',
-                    'total'  => 'N/A',
-                    'isi'    => 'N/A',
-                    'kosong' => 'N/A'
-                ],
-                [
-                    'nama'   => 'NICU',
-                    'kelas'  => '-',
-                    'total'  => 'N/A',
-                    'isi'    => 'N/A',
-                    'kosong' => 'N/A'
-                ],
-                [
-                    'nama'   => 'PICU',
-                    'kelas'  => '-',
-                    'total'  => 'N/A',
-                    'isi'    => 'N/A',
-                    'kosong' => 'N/A'
-                ],
-
+        return [
+            'nama'   => $items->first()['nm_bangsal'],
+            'kelas'  => $items->first()['kelas'],
+            'total'  => $total,
+            'kosong' => $kosong,
+            'isi'    => $isi,
         ];
+        })->values();
 
-        return view('pages.informasi.informasi_ketersediaantt',compact(['ruangan']));
+
+        $totalBed = $raw->count();
+        $totalKosong = $raw->where('status', 'KOSONG')->count();
+        $totalIsi = $raw->whereNotIn('status', ['KOSONG'])->count();
+        $totalRuang = $raw->groupBy('nm_bangsal')->count();
+
+        $bor = $totalBed > 0 ? round(($totalIsi / $totalBed) * 100) : 0;
+        //dd($totalIsi,$totalBed,$bor);
+
+        return view('pages.informasi.informasi_ketersediaantt',compact(['ruangan','totalBed','totalKosong','totalIsi','totalRuang','bor']));
     }
 
      public function registrasi()

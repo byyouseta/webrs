@@ -23,7 +23,7 @@
                 <p>
                     Data ketersediaan tempat tidur RSUP Surakarta.
                     Diperbarui :
-                    {{ now()->format('d M Y H:i') }} WIB
+                   {{ \Carbon\Carbon::now('Asia/Jakarta')->translatedFormat('d F Y H:i') }} WIB
                 </p>
 
             </div>
@@ -51,7 +51,7 @@
 
                     <span>Total Ruang</span>
 
-                    <h3>9</h3>
+                    <h3>{{$totalRuang}}</h3>
 
                 </div>
 
@@ -65,7 +65,7 @@
 
                     <span>Total Bed</span>
 
-                    <h3>100</h3>
+                    <h3>{{$totalBed}}</h3>
 
                 </div>
 
@@ -79,7 +79,7 @@
 
                     <span>Bed Terisi</span>
 
-                    <h3>N/A</h3>
+                    <h3>{{$totalIsi}}</h3>
 
                 </div>
 
@@ -93,7 +93,7 @@
 
                     <span>Bed Kosong</span>
 
-                    <h3>N/A</h3>
+                    <h3>{{$totalKosong}}</h3>
 
                 </div>
 
@@ -110,14 +110,14 @@
 
                 <h3>Okupansi Rawat Inap</h3>
 
-                <span>N/A</span>
+                <span>{{$bor}} %</span>
 
             </div>
 
             <div class="progress-custom">
 
                 <div class="progress-value"
-                     style="width:70%">
+                     style="width:{{$bor}}%">
                 </div>
 
             </div>
@@ -142,7 +142,7 @@
                         </h4>
 
                         <small>
-                            {{ $item['kelas'] }}
+                            <!-- {{ $item['kelas'] }} -->
                         </small>
 
                     </div>

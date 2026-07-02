@@ -192,14 +192,20 @@
 
         <div class="closing-card">
 
-            <h2>
-                Bersama Melayani Negeri
+            <h2 class="closing-title">
+                AMANAH
             </h2>
 
-            <p>
-                RSUP Surakarta berkomitmen memberikan pelayanan
-                kesehatan terbaik melalui profesionalisme,
-                integritas, inovasi dan kolaborasi.
+            <p class="closing-sub">
+                (AMAN, MUTU, ADIL, NURANI, ATURAN, HARMONIS)
+            </p>
+
+            <p class="closing-desc">
+                Kesehatan anda prioritas kami
+            </p>
+
+            <p class="closing-tagline">
+                Nglayani kanthi bungah, mboten ngorupsi lan mboten ngapusi
             </p>
 
         </div>
