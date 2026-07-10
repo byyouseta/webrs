@@ -297,6 +297,17 @@
     background:#fff;
 }
 
+.poster-preview-card {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.poster-preview-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
 /* MOBILE */
 
 @media(max-width:768px){

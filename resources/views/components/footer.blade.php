@@ -115,7 +115,7 @@
         <h6>WhatsApp</h6>
 
         <p>
-            Hubungi hotline -
+            Hubungi hotline 0877 3588 8811
         </p>
 
     </div>

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Web;
-
+use App\Models\PpidDocument;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -14,7 +14,15 @@ class PpidController extends Controller
      */
     public function index()
     {
-        return view('pages.ppid');
+
+       $ppid = PpidDocument::with('translation')
+        ->latest()
+        ->take(10)
+        ->get();
+
+       // dd($ppid);
+
+        return view('pages.ppid',compact(['ppid']));
     }
 
     /**

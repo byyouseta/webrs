@@ -43,6 +43,7 @@ Route::get('content/pages', [App\Http\Controllers\ContentController::class, 'pag
 Route::get('content/services', [App\Http\Controllers\ContentController::class, 'services'])->name('content.services');
 Route::get('content/promotions', [App\Http\Controllers\ContentController::class, 'promotions'])->name('content.promotions');
 Route::get('content/testimonials', [App\Http\Controllers\ContentController::class, 'testimonials'])->name('content.testimonials');
+Route::get('content/ppids', [App\Http\Controllers\ContentController::class, 'ppids'])->name('content.ppids');
 
 Route::get('master/languages', [App\Http\Controllers\MasterController::class, 'languages'])->name('master.languages');
 Route::get('master/header', [App\Http\Controllers\MasterController::class, 'header'])->name('master.header');
