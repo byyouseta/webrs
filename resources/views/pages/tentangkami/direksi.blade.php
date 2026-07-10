@@ -38,7 +38,7 @@
 
             <div class="direktur-foto">
 
-                <img src="{{ asset('img/dokter/profile.svg') }}">
+                <img src="{{ asset('img/direksi/dr_sutanto.svg') }}">
 
             </div>
 
@@ -84,7 +84,7 @@
 
             <div class="direksi-card">
 
-                <img src="{{ asset('img/dokter/profile.svg') }}">
+                <img src="{{ asset('img/direksi/dr_sutanto.svg') }}">
 
                 <div class="direksi-body">
 
@@ -103,7 +103,26 @@
 
             <div class="direksi-card">
 
-                <img src="{{ asset('img/dokter/profile.svg') }}">
+                <img src="{{ asset('img/direksi/dr_leslie_jane.svg') }}">
+
+                <div class="direksi-body">
+
+                    <h4>
+                        Direktur Perencanaan,
+                        Keuangan , Layanan, Dan Operasional
+                    </h4>
+
+                    <p>
+                        drg. Leslie Jane DT, MPH
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="direksi-card">
+
+                <img src="{{ asset('img/direksi/heru_tri.svg') }}">
 
                 <div class="direksi-body">
 
@@ -120,24 +139,7 @@
 
             </div>
 
-            <div class="direksi-card">
 
-                <img src="{{ asset('img/dokter/profile.svg') }}">
-
-                <div class="direksi-body">
-
-                    <h4>
-                        Direktur Perencanaan,
-                        Keuangan , Layanan, Dan Operasional
-                    </h4>
-
-                    <p>
-                        drg. Leslie Jane DT, MPH
-                    </p>
-
-                </div>
-
-            </div>
 
         </div>
 

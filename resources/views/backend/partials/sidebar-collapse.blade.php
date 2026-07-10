@@ -138,6 +138,23 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{ route('content.ppids') }}">
+                <span class="nav-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-file-type-pdf">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M14 2l6 6v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-16a2 2 0 0 1 2 -2h8z" />
+                        <path d="M14 2v6h6" />
+                        <path d="M9 13h2a1 1 0 0 1 0 2h-2v2h-1v-5h1z" />
+                        <path d="M13 13h1.5a1.5 1.5 0 0 1 0 3h-1.5v1h-1v-4h1z" />
+                        <path d="M17 13h2v1h-2v1h2v1h-2v1h-1v-4h1z" />
+                    </svg>
+                </span>
+                <span class="text">PPID</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <div class="nav-heading">Pengaturan Web</div>
             <hr class="mx-5 nav-line mb-1" />
         </li>

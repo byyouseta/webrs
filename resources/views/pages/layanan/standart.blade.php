@@ -148,7 +148,7 @@
 
 </section>
 
-<section class="sp-preview">
+<!-- <section class="sp-preview">
 
     <div class="container-custom">
 
@@ -170,6 +170,29 @@
                 height="900"
                 frameborder="0">
             </iframe>
+
+        </div>
+
+    </div>
+
+</section> -->
+
+
+<section class="sp-preview">
+
+    <div class="container-custom">
+
+        <div class="section-title-center">
+            <span>DOKUMEN</span>
+            <h2>Standar Pelayanan</h2>
+        </div>
+
+        <div class="poster-preview-card">
+
+            <img
+                src="{{ asset('img/hospital/standar_pelayanan.jpeg') }}"
+                alt="Poster Standar Pelayanan"
+            >
 
         </div>
 

@@ -80,18 +80,8 @@ class DokterController extends Controller
                 'spesialis' => 'Spesialis Mata',
                 'foto' => 'img/dokter/52_dr-Daniswara-Sp.webp'
             ],
-            [
-                'nip' => '197901012009122001',
-                'nama' => 'dr. Dyaning Purno Mahargiani, MM',
-                'spesialis' => 'Umum',
-                'foto' => 'img/dokter/dr-Dyaning.webp'
-            ],
-            [
-                'nip' => '198208302009121002',
-                'nama' => 'dr. Eko Prayunanto Sp. An-Ti',
-                'spesialis' => 'Spesialis Anastesiologi',
-                'foto' => 'img/dokter/dr-Eko-Prayunanto-Sp.webp'
-            ],
+
+
             [
                 'nip' => '198404032022032001',
                 'nama' => 'dr. Elly Rahmawati, Sp. M',
@@ -183,12 +173,7 @@ class DokterController extends Controller
                 'spesialis' => 'Spesialis Penyakit Dalam',
                 'foto' => 'img/dokter/dr-Marcel-Sp.webp'
             ],
-            [
-                'nip' => '197408242008121001',
-                'nama' => 'dr. Masyudi Subagiyo, Sp.OG',
-                'spesialis' => 'Spesialis Obstetri & Ginekologi',
-                'foto' => 'img/dokter/dr-Masyudi-Sp.webp'
-            ],
+
             [
                 'nip' => '202409',
                 'nama' => 'dr. Mega Anara Manurung, Sp. U',
@@ -220,29 +205,12 @@ class DokterController extends Controller
                 'foto' => 'img/dokter/dr-Riana-Sari,-Sp.webp'
             ],
 
-            [
-                'nip' => '202172',
-                'nama' => 'dr. Robby Mesakh Ngahu, Sp. An-TI',
-                'spesialis' => 'Spesialis Anastesiologi',
-                'foto' => 'img/dokter/dr-Robby-SpAn.webp'
-            ],
+
             [
                 'nip' => '197609052006041010',
                 'nama' => 'dr. Robeth Eria, Sp.OG',
                 'spesialis' => 'Spesialis Obstetri & Ginekologi',
                 'foto' => 'img/dokter/dr-Robert-Sp.webp'
-            ],
-            [
-                'nip' => '202416',
-                'nama' => 'dr. Soebandrijo, Sp.B., Sp.BTKV(K)',
-                'spesialis' => 'Spesialis Bedah Thoraks Dan Kardiovaskuler',
-                'foto' => 'img/dokter/dr-Soebandrijo-Sp.webp'
-            ],
-            [
-                'nip' => '198112222022031001',
-                'nama' => 'dr. Sondang Kriston Panjaitan, Sp.An-Ti, FCC',
-                'spesialis' => 'Spesialis Anastesiologi',
-                'foto' => 'img/dokter/dr_sondang.webp'
             ],
 
             [
@@ -252,22 +220,10 @@ class DokterController extends Controller
                 'foto' => 'img/dokter/dr-Sri-Sumiyati-Sp.webp'
             ],
             [
-                'nip' => '220587',
-                'nama' => 'dr. Trimanto Wibowo, Sp. OT., M. Biomed',
-                'spesialis' => 'Spesialis Orthopedi & Traumatologi',
-                'foto' => 'img/dokter/dr-Trimanto-Sp.webp'
-            ],
-            [
                 'nip' => '202130',
                 'nama' => 'dr. Sriyanto, M.SI.Med, Sp. B',
                 'spesialis' => 'Spesialis Bedah',
                 'foto' => 'img/dokter/dr-Sriyanto-Sp.webp'
-            ],
-            [
-                'nip' => '198806212015032001',
-                'nama' => 'dr. Vania Puspitasari Sp. Rad',
-                'spesialis' => 'Spesialis Radiologi',
-                'foto' => 'img/dokter/dr-Vania,-Sp.webp'
             ],
 
             [

@@ -217,7 +217,7 @@
                  <!-- Navbar-->
                         <li class="nav-item dropdown dropdown-custom">
 
-                            <a class="dropdown-item dropdown-toggle" href="#">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                                 {{ __('navbar.about') }}
                             </a>
 
@@ -268,7 +268,7 @@
                         <!--INFORMASI-->
                         <li class="nav-item dropdown dropdown-custom">
 
-                            <a class="dropdown-item dropdown-toggle" href="#">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                                     {{ __('navbar.information') }}
                             </a>
 

@@ -3,9 +3,7 @@
 .dewas-hero{
 
     padding:100px 0;
-
     text-align:center;
-
     background:
     linear-gradient(
         135deg,
@@ -17,37 +15,26 @@
 .dewas-badge{
 
     display:inline-block;
-
     padding:8px 18px;
-
     border-radius:999px;
-
     background:#0E9F8D;
-
     color:#fff;
-
     font-size:12px;
-
     font-weight:600;
 }
 
 .dewas-hero h1{
 
     margin-top:20px;
-
     font-size:56px;
-
     font-weight:800;
 }
 
 .dewas-hero p{
 
     max-width:800px;
-
     margin:20px auto 0;
-
     color:#6B7280;
-
     line-height:1.9;
 }
 
@@ -57,53 +44,42 @@
 .dewas-section{
 
     padding:80px 0 40px;
+    background:
+    linear-gradient(
+        135deg,
+        #EAFBF8,
+        #FFFFFF
+    );
 }
 
-.dewas-chief{
 
-    text-align:center;
 
-    max-width:400px;
+.dewas-photo {
+    width: 300px;        /* ukuran normal */
+    max-width: 100%;     /* biar responsive */
+    margin: 0 auto;
+    margin-bottom:20px;     /* center horizontal */
+    border-radius: 10%;
+    overflow: hidden;
 
-    margin:auto;
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .05);
+    transition: .3s;
 }
 
-.dewas-photo{
-
-    width:140px;
-
-    height:140px;
-
-    border-radius:50%;
-
-    background:#EAFBF8;
-
-    margin:auto;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
+.dewas-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.dewas-photo i{
-
-    font-size:55px;
-
-    color:#0E9F8D;
+.dewas-chief {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-.dewas-chief h3{
-
-    margin-top:20px;
-}
-
-.dewas-chief span{
-
-    color:#6B7280;
-}
-
 
 /* TITLE */
 
@@ -150,21 +126,7 @@
     gap:24px;
 }
 
-.dewas-card{
 
-    background:#fff;
-
-    border-radius:24px;
-
-    padding:30px;
-
-    text-align:center;
-
-    box-shadow:
-    0 10px 25px rgba(0,0,0,.05);
-
-    transition:.3s;
-}
 
 .dewas-card:hover{
 
@@ -286,6 +248,83 @@
     .duty-box{
 
         padding:40px 24px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    /* HERO */
+    .dewas-hero{
+        padding:60px 15px;
+    }
+
+    .dewas-hero h1{
+        font-size:30px;
+        line-height:1.3;
+    }
+
+    .dewas-hero p{
+        font-size:14px;
+        line-height:1.6;
+        padding:0 5px;
+    }
+
+    /* KETUA */
+    .dewas-section{
+        padding:50px 15px 30px;
+    }
+
+   .dewas-photo {
+        width: 180px;   /* lebih kecil biar pas layar HP */
+        margin: 0 auto;
+    }
+
+    .dewas-photo img {
+        width: 100%;
+        height: auto;
+    }
+
+    .dewas-chief {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .dewas-chief h3{
+        font-size:16px;
+        line-height:1.4;
+    }
+
+    .dewas-chief span{
+        font-size:13px;
+    }
+
+    /* TITLE */
+    .section-title-center h2{
+        font-size:26px;
+    }
+
+    /* MEMBER */
+    .dewas-grid{
+        grid-template-columns:1fr;
+        gap:16px;
+    }
+
+    .dewas-card{
+        padding:20px;
+        border-radius:18px;
+    }
+
+    /* DUTY */
+    .duty-list{
+        grid-template-columns:1fr;
+    }
+
+    .duty-box{
+        padding:30px 20px;
+        border-radius:20px;
     }
 
 }

@@ -37,17 +37,15 @@
         <div class="dewas-chief">
 
             <div class="dewas-photo">
-
-                <i class="fas fa-user-tie"></i>
-
+                <img src="{{ asset('img/direksi/dr_azhar_jaya.svg') }}" alt="Dewan Pengawas">
             </div>
 
             <h3>
-                Ketua Dewan Pengawas
+                dr. Azhar Jaya, S.H., SKM, MARS
             </h3>
 
             <span>
-                Nama Ketua Dewan Pengawas
+                Dewan Pengawas RSUP Surakarta
             </span>
 
         </div>
@@ -57,76 +55,7 @@
 </section>
 
 
-<!-- ANGGOTA -->
-<section class="dewas-member-section">
 
-    <div class="container-custom">
-
-        <div class="section-title-center">
-
-            <span>ANGGOTA DEWAN PENGAWAS</span>
-
-            <h2>
-                Susunan Dewan Pengawas
-            </h2>
-
-        </div>
-
-        <div class="dewas-grid">
-
-            <div class="dewas-card">
-
-                <div class="dewas-avatar">
-                    <i class="fas fa-user"></i>
-                </div>
-
-                <h4>Nama Anggota 1</h4>
-
-                <p>Anggota Dewan Pengawas</p>
-
-            </div>
-
-            <div class="dewas-card">
-
-                <div class="dewas-avatar">
-                    <i class="fas fa-user"></i>
-                </div>
-
-                <h4>Nama Anggota 2</h4>
-
-                <p>Anggota Dewan Pengawas</p>
-
-            </div>
-
-            <div class="dewas-card">
-
-                <div class="dewas-avatar">
-                    <i class="fas fa-user"></i>
-                </div>
-
-                <h4>Nama Anggota 3</h4>
-
-                <p>Anggota Dewan Pengawas</p>
-
-            </div>
-
-            <div class="dewas-card">
-
-                <div class="dewas-avatar">
-                    <i class="fas fa-user"></i>
-                </div>
-
-                <h4>Nama Anggota 4</h4>
-
-                <p>Anggota Dewan Pengawas</p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
 
 
 <!-- TUGAS -->

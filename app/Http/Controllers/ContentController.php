@@ -44,4 +44,9 @@ class ContentController extends Controller
     {
         return view('backend.content.testimonials');
     }
+
+     public function ppids()
+    {
+        return view('backend.content.ppids');
+    }
 }
