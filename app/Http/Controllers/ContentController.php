@@ -49,4 +49,8 @@ class ContentController extends Controller
     {
         return view('backend.content.ppids');
     }
+    public function doctors()
+    {
+        return view('backend.content.doctors');
+    }
 }
