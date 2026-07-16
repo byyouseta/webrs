@@ -37,7 +37,7 @@
 
             <div class="ikm-score">
 
-                <span>Nilai IKM</span>
+                <span>Nilai IKM 2025</span>
 
                 <h2>
                     93.79
@@ -167,6 +167,13 @@
                         <td>93.79</td>
                         <td>A</td>
                         <td>Sangat Baik</td>
+                    </tr>
+
+                     <tr>
+                        <td>2026 Triwulan I</td>
+                        <td>81.50</td>
+                        <td>B</td>
+                        <td>Baik</td>
                     </tr>
 
 

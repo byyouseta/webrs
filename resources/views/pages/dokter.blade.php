@@ -59,7 +59,7 @@
             @foreach($dokters as $dokter)
             <div class="dokter-card">
 
-                <img src="{{ asset($dokter['foto']) }}" alt="dokter">
+                <img src="{{ asset('storage/' . $dokter->foto) }}" alt="dokter">
 
                 <div class="dokter-body">
 
