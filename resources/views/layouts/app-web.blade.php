@@ -50,10 +50,11 @@
     <link rel="stylesheet" href="{{ asset('css/informasi_hkp.css') }}?v={{ time() }}">
     <link rel="stylesheet" href="{{ asset('css/informasi_privacy.css') }}?v={{ time() }}">
     <link rel="stylesheet" href="{{ asset('css/informasi_faq.css') }}?v={{ time() }}">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
 
 
-    <title>RSUP Surakarta</title>
+    <title>{{ $settings['hospital_name'] ?? '' }}</title>
 
     <meta name="description" content="Website resmi RSUP Surakarta">
 

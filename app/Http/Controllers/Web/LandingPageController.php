@@ -6,6 +6,7 @@ use App\Models\Service;
 use App\Models\Testimonial;
 use App\Models\Promotion;
 use App\Models\Article;
+use App\Models\Setting;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -16,8 +17,9 @@ class LandingPageController extends Controller
      */
     public function index(request $request)
     {
-        $services = Service::all();
 
+
+        $services = Service::all();
         $testimonials = Testimonial::latest()
                         ->take(10)
                         ->get();

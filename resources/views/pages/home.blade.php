@@ -57,12 +57,12 @@
             <div class="hero-left">
 
                 <p class="small-text">
-                    Selamat datang di RSUP Surakarta
+                    Selamat datang di {{ $settings['hospital_name'] ?? '' }}
                 </p>
 
                 <h1 class="hero-title">
-                    Solusi Kesehatan <br>
-                    untuk Anda dan Keluarga
+                   {{ $heroTagline }}
+
                 </h1>
 
                 <p class="hero-desc">
@@ -182,7 +182,7 @@
                 </p>
 
                <div class="about-link mt-4">
-                    <a href="https://maps.app.goo.gl/LJHyu82CodVYTCJb8" class="about-btn" target="_blank">
+                    <a href="{{ $settings['maps_url'] ?? '' }}" class="about-btn" target="_blank">
                         <span>Kunjungi Kami</span>
                         <i class="bi bi-arrow-up-right"></i>
                     </a>
