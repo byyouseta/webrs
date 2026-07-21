@@ -4,7 +4,7 @@
 
         <div class="topbar-left">
 
-            <a href="https://maps.google.com/?q=RSUP+Surakarta"
+            <a href="{{ $settings['maps_url'] ?? '' }}"
             target="_blank"
             class="topbar-location"
             style="color:#fff !important; text-decoration:none !important;">
@@ -15,9 +15,7 @@
                     <i class="bi bi-geo-alt-fill"
                     style="color:#fff !important;"></i>
 
-                    Jl. Profesor DR. Soeharso No.28,
-                    Jajar, Kec. Laweyan,
-                    Kota Surakarta
+                   {{ $settings['location'] ?? '' }}
 
                 </small>
 
@@ -28,12 +26,12 @@
         <div class="topbar-right d-flex align-items-center gap-3">
             <small>
                 <i class="bi bi-telephone-fill"></i>
-                Contact Center: 0271-713055
+                Contact Center: {{ $settings['contact_center'] ?? '' }}
             </small>
 
             <small>
                 <i class="bi bi-headset"></i>
-                IGD : 0271-728297
+                IGD : {{ $settings['spgdt_number'] ?? '' }}
             </small>
 
                 <div class="dropdown language-dropdown">
@@ -87,7 +85,7 @@
     <div class="container">
 
         <!-- LOGO -->
-        <a class="navbar-brand d-flex align-items-center" href="{{route('home')}}">
+        <a class="navbar-brand d-flex align-items-center" href="{{route('home_web')}}">
             <img src="{{ asset('img/logo-rs-full.svg') }}?v={{ rand() }}"
                 alt="Logo RS"
                 class="logo-rs">

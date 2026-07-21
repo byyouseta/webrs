@@ -30,10 +30,22 @@ Route::get('/', [LandingPageController::class, 'index'])->name('home_web');
 //     ->name('profile');
 
 Auth::routes([
-    'register' => true,
+    'register' => false,
     'reset' => false,
     'verify' => false,
 ]);
+Route::get('/cache', function () {
+
+    Artisan::call('optimize:clear');
+    Artisan::call('optimize');
+
+    return response()->json([
+        'status' => 'success',
+        'output' => Artisan::output(),
+    ]);
+
+});
+
 
 //Content
 Route::get('master/information', [App\Http\Controllers\ContentController::class, 'information'])->name('content.information');

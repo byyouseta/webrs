@@ -19,11 +19,6 @@ class DokterController extends Controller
         $search = $request->query('cari');
         $spesialis = $request->query('spesialis');
 
-        /*
-        |--------------------------------------------------------------------------
-        | Ambil jadwal dokter dari API
-        |--------------------------------------------------------------------------
-        */
         $response = Http::withoutVerifying()
             ->withHeaders([
                 'X-API-KEY' => config('services.bridging.key'),
@@ -50,13 +45,7 @@ class DokterController extends Controller
             'MINGGU' => 7,
         ];
 
-        /*
-        |--------------------------------------------------------------------------
-        | Daftar spesialis
-        |--------------------------------------------------------------------------
-        | Diambil sebelum filter supaya pilihan dropdown tidak hilang setelah
-        | pengguna memilih salah satu spesialis.
-        */
+
         $spesialisList = Doctor::active()
             ->whereNotNull('spesialis')
             ->where('spesialis', '!=', '')
@@ -65,11 +54,7 @@ class DokterController extends Controller
             ->unique()
             ->values();
 
-        /*
-        |--------------------------------------------------------------------------
-        | Query dokter
-        |--------------------------------------------------------------------------
-        */
+
         $doctors = Doctor::active()
             ->when($search, function ($query) use ($search) {
                 $query->where(function ($subQuery) use ($search) {
@@ -97,11 +82,7 @@ class DokterController extends Controller
             ->orderBy('nama')
             ->get();
 
-        /*
-        |--------------------------------------------------------------------------
-        | Tambahkan jadwal ke setiap model Doctor
-        |--------------------------------------------------------------------------
-        */
+
         $doctors->each(function ($doctor) use (
             $jadwalDokter,
             $urutanHari
@@ -134,10 +115,7 @@ class DokterController extends Controller
                 })
                 ->values();
 
-            /*
-             * Menambahkan atribut jadwal sementara.
-             * Tidak disimpan ke database.
-             */
+
             $doctor->setAttribute('jadwal', $jadwal);
         });
 
@@ -168,6 +146,7 @@ class DokterController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
+     *
      */
     public function store(Request $request)
     {
