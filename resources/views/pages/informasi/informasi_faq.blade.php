@@ -189,7 +189,7 @@
                 mendapatkan bantuan dan informasi lebih lanjut.
             </p>
 
-            <a href="#"
+            <a href="https://wa.me/6287735888811"
                class="faq-btn">
 
                 Hubungi Kami

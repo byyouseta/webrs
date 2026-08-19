@@ -95,7 +95,6 @@
                 <span>04</span>
                 <p>
                    Meningkatkan tata kelola rumah sakit melalui digitalisasi layanan
-                   Menyelenggarakan pendidikan, pelatihan, dan penelitian yang berkualitas dan inovatif
                 </p>
             </div>
             <div class="misi-card">
