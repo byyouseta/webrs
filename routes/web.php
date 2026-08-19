@@ -12,7 +12,15 @@ use App\Http\Controllers\Web\PromoController;
 use App\Http\Controllers\Web\LayananController;
 
 use App\Http\Controllers\Web\LandingPageController;
+// use Spatie\Sitemap\SitemapGenerator;
 
+// Route::get('/generate-sitemap', function () {
+
+//     SitemapGenerator::create(config('app.url'))
+//         ->writeToFile(public_path('sitemap.xml'));
+
+//     return 'Sitemap berhasil dibuat!';
+// });
 
 //Route::view('/', 'welcome');
 // Route::get('/', function () {

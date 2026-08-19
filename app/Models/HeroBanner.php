@@ -15,4 +15,7 @@ class HeroBanner extends Model
         'sort',
         'is_active'
     ];
+
+
+
 }

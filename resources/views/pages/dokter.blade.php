@@ -25,10 +25,8 @@
 
                     <!-- semua -->
                     <a
-                        href="{{ route('dokter_list', [
-                            'cari' => request('cari')
-                        ]) }}"
-                        class="filter-btn {{ request('spesialis') == null ? 'active' : '' }}"
+                        href="{{ route('dokter_list') }}"
+                        class="filter-btn {{ request('spesialis') == null && request('cari') == null ? 'active' : '' }}"
                     >
                         Semua
                     </a>

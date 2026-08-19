@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-
-
     <meta charset="UTF-8">
-    <title>@yield('title', 'RSUP Surakarta')</title>
+    <title>
+    @if(trim($__env->yieldContent('title')))
+        @yield('title')
+    @else
+        {{ $settings['hospital_name'] ?? 'RSUP Surakarta' }}
+    @endif
+    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
+    <link rel="canonical" href="{{ url()->current() }}">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}?v={{ time() }}">
@@ -52,27 +52,58 @@
     <link rel="stylesheet" href="{{ asset('css/informasi_faq.css') }}?v={{ time() }}">
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
-
-
-    <title>{{ $settings['hospital_name'] ?? '' }}</title>
-
-    <meta name="description" content="Website resmi RSUP Surakarta">
-
+    <meta name="google-site-verification" content="xO97_yhtmaj5eTKJOcJPXYUwldnb_ge4kGMyoZZ8JiI" />
+    <meta name="description" content="Website resmi RSUP Surakarta. Informasi layanan kesehatan, jadwal dokter, pendaftaran online, ketersediaan tempat tidur, dan informasi publik RSUP Surakarta.">
+    <meta name="application-name" content="RSUP Surakarta">
+    <meta property="og:site_name" content="RSUP Surakarta">
     <meta property="og:type" content="website">
     <meta property="og:title" content="RSUP Surakarta">
-    <meta property="og:description"
-        content="Informasi layanan kesehatan dan pendaftaran online RSUP Surakarta">
-    <meta property="og:image"
-        content="{{ asset('img/logo-share.png') }}">
-    <meta property="og:url"
-        content="{{ url()->current() }}">
+    <meta property="og:description" content="Website resmi RSUP Surakarta. Informasi layanan kesehatan, jadwal dokter, pendaftaran online, ketersediaan tempat tidur, dan informasi publik RSUP Surakarta.">
+    <meta property="og:image" content="{{ asset('img/logo-share.png') }}">
+    <meta property="og:url" content="{{ url()->current() }}">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="RSUP Surakarta">
-    <meta name="twitter:description" content="Informasi layanan kesehatan dan pendaftaran online RSUP Surakarta">
+    <meta name="twitter:description" content="Website resmi RSUP Surakarta. Informasi layanan kesehatan, jadwal dokter, pendaftaran online, ketersediaan tempat tidur, dan informasi publik RSUP Surakarta.">
     <meta name="twitter:image" content="{{ asset('img/logo-share.png') }}">
-</head>
+    @php
+        $websiteSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'WebSite',
+            'name' => 'RSUP Surakarta',
+            'url' => url('/'),
+            'alternateName' => [
+                'Rumah Sakit Umum Pusat Surakarta',
+                'RSUP Surakarta Kemenkes',
+            ],
+        ];
+        $hospitalSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'Hospital',
+            'name' => 'RSUP Surakarta',
+            'url' => url('/'),
+            'logo' => asset('img/logo-share.png'),
+            'image' => asset('img/logo-share.png'),
+            'telephone' => '(0271) 714578',
+            'address' => [
+                '@type' => 'PostalAddress',
+                'streetAddress' => 'Jl. Prof. Dr. R. Soeharso No. 28',
+                'addressLocality' => 'Surakarta',
+                'addressRegion' => 'Jawa Tengah',
+                'postalCode' => '57162',
+                'addressCountry' => 'ID',
+            ],
+        ];
+        @endphp
 
+        <script type="application/ld+json">
+        {!! json_encode($websiteSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+        </script>
+
+        <script type="application/ld+json">
+        {!! json_encode($hospitalSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
+        </script>
+</head>
 
 <body>
 <div class="modal fade"
@@ -80,23 +111,16 @@
      tabindex="-1">
 
     <div class="modal-dialog modal-xl modal-dialog-centered">
-
         <div class="modal-content search-modal">
-
             <div class="modal-body">
-
                 <div class="search-header">
-
                     <h3>Pencarian Website</h3>
-
                     <button
                         type="button"
                         class="btn-close"
                         data-bs-dismiss="modal">
                     </button>
-
                 </div>
-
                 <input
                     type="text"
                     id="globalSearch"
@@ -104,19 +128,13 @@
                     placeholder="Cari dokter, poli atau artikel kesehatan...">
 
                 <div id="searchResult">
-
                     <div class="search-item">
                         Mulai ketik untuk mencari...
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </div>
 @include('components.navbar')
 
@@ -152,7 +170,9 @@ function reveal() {
     }
     window.addEventListener("scroll", reveal);
 </script>
-<!-- <script>
+
+
+<script>
     document.querySelectorAll('.lang-switch span').forEach(el => {
         el.addEventListener('click', function () {
             document.querySelectorAll('.lang-switch span').forEach(s => s.classList.remove('active'));
@@ -161,7 +181,7 @@ function reveal() {
     });
 </script>
 
-<script>
+<!-- <script>
 
     document.addEventListener('contextmenu', function(e){
         e.preventDefault();
@@ -302,6 +322,8 @@ document
 });
 
 </script>
+
+
 </body>
 
 </html>

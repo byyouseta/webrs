@@ -15,7 +15,7 @@
     <meta name="twitter:description" content="Informasi layanan kesehatan, pendaftaran online, promo, dan berita terbaru RSUP Surakarta.">
     <meta name="twitter:image" content="{{ asset('img/logo-share.png') }}">
 
-<section class="hero">
+    <section class="hero">
 
     <!-- SLIDER -->
     <div id="heroCarousel"
@@ -23,25 +23,13 @@
          data-bs-ride="carousel">
 
         <div class="carousel-inner">
-
-            <div class="carousel-item active">
-                <div class="hero-bg"
-                     style="background-image:url('{{ asset('img/assets/paralax3.svg') }}?v={{ rand() }} ');">
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="hero-bg"
-                     style="background-image:url('{{ asset('img/assets/paralax1.svg') }}?v={{ rand() }}');">
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="hero-bg"
-                     style="background-image:url('{{ asset('img/assets/paralax2.svg') }}?v={{ rand() }} ');">
-                </div>
-            </div>
-
+               @foreach ($heroBanners as $index => $banner)
+                    <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+                        <div class="hero-bg"
+                            style="background-image: url('{{ Storage::url($banner->image) }}');">
+                        </div>
+                    </div>
+                @endforeach
         </div>
 
     </div>
@@ -569,6 +557,57 @@
                 </div>
 
                 <span class="arrow">→</span>
+            </a>
+
+            <a href="https://srikandi.arsip.go.id/"
+            class="feedback-item-rsup"
+            target="_blank">
+
+                <img src="{{ asset('img/icon/eoffice.webp') }}"
+                    alt="SRIKANDI"
+                    class="feedback-logo">
+
+                <div class="feedback-text">
+                    <h5>e-Office</h5>
+                    <p>Aplikasi Persuratan Perkantoran</p>
+                </div>
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
+
+            <a href="https://simadam.rsupsurakarta.id" class="feedback-item-rsup" target="_blank">
+                <i class="bi bi-file-earmark-person-fill"></i>
+
+                <div class="feedback-text">
+                    <h5>SIMADAM</h5>
+                    <p>Website pegawai RSUP Surakarta</p>
+                </div>
+
+                <span class="arrow">→</span>
+            </a>
+
+
+
+           <a href="https://ekinerja-portal-eoffice.kemkes.go.id/index.cj"
+            class="feedback-item-rsup"
+            target="_blank">
+
+                <img src="{{ asset('img/icon/logo-kemenkes.png') }}"
+                    alt="e-Office Kemenkes"
+                    class="feedback-logo">
+
+                <div class="feedback-text">
+                    <h5>e-Kinerja Kemenkes</h5>
+                    <p>e-Kinerja Kemenkes</p>
+                </div>
+
+                <span class="arrow">
+                    →
+                </span>
+
             </a>
 
         </div>
