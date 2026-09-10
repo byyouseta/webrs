@@ -15,7 +15,7 @@ class PromoController extends Controller
     public function index(request $request)
     {
 
-       $promotions = Promotion::with('translation')
+       $promotions = Promotion::active()->with('translation')
         ->latest()
         ->take(10)
         ->get();

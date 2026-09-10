@@ -3,7 +3,7 @@
 
 <head>
     @include('backend.partials.head.head-meta')
-    <title>Sign In | Dasher - Responsive Bootstrap 5 Admin Dashboard</title>
+    <title>Login Website</title>
     @include('backend/partials/head/head-links')
 </head>
 

@@ -50,4 +50,16 @@ class Article extends Model
                 => "Artikel {$eventName}"
             );
     }
+
+
+    // scope artikel aktif
+    public function scopeActive($query)
+    {
+        return $query
+
+            ->where(
+                'is_published',
+                1
+            );
+    }
 }
