@@ -57,6 +57,15 @@
                                         </div>
                                     </div>
 
+                                    <div class="cf-turnstile"
+                                        data-sitekey="{{ config('services.turnstile.site_key') }}">
+                                    </div>
+                                    @error('captcha')
+                                        <div class="text-danger mt-2">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+
                                     <div class="mb-4 d-flex align-items-center justify-content-between">
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" id="rememberMeCheckbox"
@@ -120,6 +129,7 @@
 
     @include('backend/partials/scripts')
     <script src="@@webRoot/assets/js/vendors/password.js"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </body>
 
 </html>
