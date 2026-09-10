@@ -76,9 +76,10 @@
 
             <select id="filterKategori">
                 <option value="all">Semua Kategori</option>
-                <option value="berkala">Informasi Berkala</option>
-                <option value="serta-merta">Serta Merta</option>
-                <option value="dokumen">Dokumen Publik</option>
+                <option value="Informasi Berkala">Informasi Berkala</option>
+                <option value="Informasi Serta Merta">Serta Merta</option>
+                <option value="Dokumen Publik">Dokumen Publik</option>
+                <option value="Layanan Informasi">Layanan Informasi</option>
             </select>
 
         </div>

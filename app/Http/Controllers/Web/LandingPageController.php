@@ -20,16 +20,16 @@ class LandingPageController extends Controller
     {
 
         $services = Service::all();
-        $testimonials = Testimonial::latest()
+        $testimonials = Testimonial::active()->latest()
                         ->take(10)
                         ->get();
 
-       $promotions = Promotion::with('translation')
+       $promotions = Promotion::active()->with('translation')
         ->latest()
         ->take(10)
         ->get();
 
-        $articles = Article::with('translation')
+        $articles = Article::active()->with('translation')
         ->latest()
         ->take(10)
         ->get();

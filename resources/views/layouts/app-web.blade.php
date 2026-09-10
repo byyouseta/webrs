@@ -103,6 +103,11 @@
         <script type="application/ld+json">
         {!! json_encode($hospitalSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
         </script>
+
+        {{-- UserWay Accessibility Widget --}}
+        <script src="https://cdn.userway.org/widget.js" data-account="cGKvlLHsey"></script>
+
+
 </head>
 
 <body>
