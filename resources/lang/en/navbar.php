@@ -10,9 +10,6 @@ return [
 
 
     'promotion'     => 'Promotion',
-    'update'        => 'The Latest',
-
-
     'general_service' => 'General Services',
     'featured_service' => 'Featured Services',
         'executive_service' => 'Executive Services',
@@ -47,5 +44,10 @@ return [
        'patient_rights'             => 'Patient Rights and Obligations',
        'privacy_policy'             => 'Privacy Policy',
        'faq'                        => 'FAQ',
+
+    'update'        => 'The Latest',
+        'news'      => 'News',
+        'article'   => 'Article',
+        'announcement'   => 'Announcement',
 
 ];

@@ -123,3 +123,15 @@ Route::get('/informasi/hkp/', [InformasiController::class, 'hkp'])->name('info_h
 Route::get('/informasi/privacy/', [InformasiController::class, 'privacy'])->name('info_privacy');
 Route::get('/informasi/faq/', [InformasiController::class, 'faq'])->name('info_faq');
 
+
+Route::get('/yangterbaru/artikel/', function () {
+    abort(404);
+})->name('info_artikel');
+
+Route::get('/yangterbaru/berita/', function () {
+    abort(404);
+})->name('info_berita');
+
+Route::get('/yangterbaru/pengumuman/', function () {
+    abort(404);
+})->name('info_pengumuman');
