@@ -80,6 +80,7 @@
                 <option value="Informasi Serta Merta">Serta Merta</option>
                 <option value="Dokumen Publik">Dokumen Publik</option>
                 <option value="Layanan Informasi">Layanan Informasi</option>
+                <option value="Informasi Publik">Informasi Publik</option>
             </select>
 
         </div>
@@ -91,7 +92,7 @@
 
                 <thead>
                     <tr>
-                        <th>No</th>
+
                         <th>Judul Informasi</th>
                         <th>Kategori</th>
                         <th>Tanggal</th>
@@ -103,7 +104,7 @@
                 <tbody>
                     @foreach($ppid as $data)
                     <tr data-category="{{$data->category->name}}">
-                        <td>{{$data->id}}</td>
+
                         <td>{{$data->translation->title}}</td>
                         <td>
                             <span class="kategori dokumen">

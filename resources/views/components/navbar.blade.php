@@ -101,6 +101,13 @@
 
             <ul class="navbar-nav mx-auto">
 
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('home_web') }}">
+                        <i class="fas fa-home"></i>
+                    </a>
+                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('dokter_list') }}">
                     {{ __('navbar.doctor') }}
@@ -329,12 +336,28 @@
 
                         <!-- MENU BIASA -->
                         <li>
-                            <a class="dropdown-item" href="{{ route('ppid') }}">
-                                {{ __('navbar.ppid') }}
+                            <a class="dropdown-item" href="{{ route('info_artikel') }}">
+                             {{ __('navbar.article') }}
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ route('info_berita') }}">
+                                {{ __('navbar.news') }}
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ route('info_pengumuman') }}">
+                               {{ __('navbar.announcement') }}
                             </a>
                         </li>
 
                     </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('ppid') }}">
+                          {{ __('navbar.ppid') }}
+                    </a>
                 </li>
 
                 <li class="nav-item">

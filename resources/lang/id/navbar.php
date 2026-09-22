@@ -6,7 +6,7 @@ return [
 
 
     'promotion'     => 'Promo',
-    'update'     => 'Yang Terbaru',
+
 
     'services'  => 'Layanan',
         'general_service' => 'Layanan Umum',
@@ -39,14 +39,18 @@ return [
 
     'information' => 'Informasi',
        'ppid'                       => 'PPID',
-       'availbility_tt'             => 'Ketersediaan TT',
+       'availbility_tt'             => 'Tempat Tidur',
        'patient_registration'       => 'Registrasi Pasien',
        'services_rate'              => 'Tarif Layanan',
-       'satisfaction_survey'        => 'SKM',
+       'satisfaction_survey'        => 'Hasil Survei Kepuasan',
        'patient_rights'             => 'Hak dan Kewajiban Pasien',
        'privacy_policy'             => 'Kebijakan Privasi',
        'faq'                        => 'FAQ',
 
+     'update'     => 'Yang Terbaru',
+          'news'            => 'Berita',
+          'article'         => 'Artikel',
+          'announcement'    => 'Pengumuman',
 
 
 ];

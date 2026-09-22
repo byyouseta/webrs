@@ -77,8 +77,37 @@
                     </a>
                     <i class="bi bi-arrow-right-short"></i>
                 </li>
+                 </ul>
+            <h5>LINK TERKAIT</h5>
+                <ul>
+
+                <li>
+                    <a href="https://www.kemkes.go.id/id/home" target="_blank">
+                        Kementrian Kesehatan RI
+                    </a>
+                    <i class="bi bi-arrow-right-short"></i>
+                </li>
+                <li>
+                    <a href="https://wbs.kemkes.go.id/" target="_blank">
+                        Whistleblower System
+                    </a>
+                    <i class="bi bi-arrow-right-short"></i>
+                </li>
+                <li>
+                    <a href="https://kedokteran.ums.ac.id/" target="_blank">
+                        Fakultas Kedokteran UMS
+                    </a>
+                    <i class="bi bi-arrow-right-short"></i>
+                </li>
+                <li>
+                    <a href="https://www.persi.or.id/" target="_blank">
+                        PERSI
+                    </a>
+                    <i class="bi bi-arrow-right-short"></i>
+                </li>
 
             </ul>
+
 
         </div>
 
@@ -104,7 +133,11 @@
         <h6>Kontak Darurat</h6>
 
         <p>
-            Hubungi (0271) 713055 untuk darurat medis
+            Hubungi 0271-728297
+            untuk darurat medis
+        </p>
+        <p>
+           Whatsapp 0895 6359 43544
         </p>
 
     </div>
