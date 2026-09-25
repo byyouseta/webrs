@@ -2,70 +2,74 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>
-    @if(trim($__env->yieldContent('title')))
-        @yield('title')
-    @else
-        {{ $settings['hospital_name'] ?? 'RSUP Surakarta' }}
-    @endif
-    </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="{{ url()->current() }}">
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/hero.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/layanan.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/eksekutif.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/testimoni.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/section.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/layanan_umum.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/layanan_eksekutif.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/layanan_mcu.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/layanan_homecare.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/layanan_diklat.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/layanan_diklit.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/layanan_diklat_tarif.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/layanan_fasilitas.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/layanan_maklumat.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/layanan_standart.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/tentang_sejarah.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/tentang_visimisi.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/tentang_struktur.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/tentang_dewas.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/tentang_direksi.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/tentang_penghargaan.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/tentang_lokasi.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/informasi_ketersediaantt.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/informasi_registrasi.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/informasi_tarif.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/informasi_skm.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/informasi_hkp.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/informasi_privacy.css') }}?v={{ time() }}">
-    <link rel="stylesheet" href="{{ asset('css/informasi_faq.css') }}?v={{ time() }}">
-    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+        <title>
+            @if(trim($__env->yieldContent('title')))
+                @yield('title')
+            @else
+                {{ $settings['hospital_name'] ?? 'RSUP Surakarta' }}
+            @endif
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="{{ url()->current() }}">
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <!-- CSS -->
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/navbar.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/hero.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/layanan.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/eksekutif.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/testimoni.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/section.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/layanan_umum.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/layanan_eksekutif.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/layanan_mcu.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/layanan_homecare.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/layanan_diklat.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/layanan_diklit.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/layanan_diklat_tarif.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/layanan_fasilitas.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/layanan_maklumat.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/layanan_standart.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/tentang_sejarah.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/tentang_visimisi.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/tentang_struktur.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/tentang_dewas.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/tentang_direksi.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/tentang_penghargaan.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/tentang_lokasi.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/informasi_ketersediaantt.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/informasi_registrasi.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/informasi_tarif.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/informasi_skm.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/informasi_hkp.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/informasi_privacy.css') }}?v={{ time() }}">
+        <link rel="stylesheet" href="{{ asset('css/informasi_faq.css') }}?v={{ time() }}">
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
-    <meta name="google-site-verification" content="xO97_yhtmaj5eTKJOcJPXYUwldnb_ge4kGMyoZZ8JiI" />
-    <meta name="description" content="Website resmi RSUP Surakarta. Informasi layanan kesehatan, jadwal dokter, pendaftaran online, ketersediaan tempat tidur, dan informasi publik RSUP Surakarta.">
-    <meta name="application-name" content="RSUP Surakarta">
-    <meta property="og:site_name" content="RSUP Surakarta">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="RSUP Surakarta">
-    <meta property="og:description" content="Website resmi RSUP Surakarta. Informasi layanan kesehatan, jadwal dokter, pendaftaran online, ketersediaan tempat tidur, dan informasi publik RSUP Surakarta.">
-    <meta property="og:image" content="{{ asset('img/logo-share.png') }}">
-    <meta property="og:url" content="{{ url()->current() }}">
+        @if(trim($__env->yieldContent('meta')))
+            @yield('meta')
+        @else
+            <meta name="description" content="Website resmi RSUP Surakarta. Informasi layanan kesehatan, jadwal dokter, pendaftaran online, ketersediaan tempat tidur, dan informasi publik RSUP Surakarta.">
+            <meta name="application-name" content="RSUP Surakarta">
+            <meta name="google-site-verification" content="xO97_yhtmaj5eTKJOcJPXYUwldnb_ge4kGMyoZZ8JiI" />
+            <meta property="og:site_name" content="RSUP Surakarta">
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="RSUP Surakarta">
+            <meta property="og:description" content="Website resmi RSUP Surakarta. Informasi layanan kesehatan, jadwal dokter, pendaftaran online, ketersediaan tempat tidur, dan informasi publik RSUP Surakarta.">
+            <meta property="og:image" content="{{ asset('img/logo-share.png') }}">
+            <meta property="og:url" content="{{ url()->current() }}">
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="RSUP Surakarta">
+            <meta name="twitter:description" content="Website resmi RSUP Surakarta. Informasi layanan kesehatan, jadwal dokter, pendaftaran online, ketersediaan tempat tidur, dan informasi publik RSUP Surakarta.">
+            <meta name="twitter:image" content="{{ asset('img/logo-share.png') }}">
+        @endif
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="RSUP Surakarta">
-    <meta name="twitter:description" content="Website resmi RSUP Surakarta. Informasi layanan kesehatan, jadwal dokter, pendaftaran online, ketersediaan tempat tidur, dan informasi publik RSUP Surakarta.">
-    <meta name="twitter:image" content="{{ asset('img/logo-share.png') }}">
     @php
         $websiteSchema = [
             '@context' => 'https://schema.org',
@@ -103,6 +107,7 @@
         <script type="application/ld+json">
         {!! json_encode($hospitalSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
         </script>
+
 
         <!-- {{-- UserWay Accessibility Widget --}}
         <script src="https://cdn.userway.org/widget.js" data-account="cGKvlLHsey"></script> -->

@@ -23,6 +23,34 @@ class PromoController extends Controller
         return view('pages.promo',compact(['promotions']));
     }
 
+
+    public function detailPromotion($encodedId)
+    {
+        $encodedId = strtr($encodedId, '-_', '+/');
+
+        $padding = strlen($encodedId) % 4;
+
+        if ($padding > 0) {
+            $encodedId .= str_repeat('=', 4 - $padding);
+        }
+
+        $id = base64_decode($encodedId, true);
+
+        if ($id === false || !ctype_digit($id)) {
+            abort(404);
+        }
+
+        $promotion = Promotion::active()
+            ->with([
+                'translation',
+                'service'
+            ])
+            ->where('id', $id)
+            ->firstOrFail();
+
+
+        return view('pages.promo_detail',compact('promotion'));
+    }
     /**
      * Show the form for creating a new resource.
      *

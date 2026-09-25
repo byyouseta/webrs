@@ -54,6 +54,7 @@
 
                     <div class="promo-body">
 
+
                         <span class="promo-tag">
                             {{ $promotion->category ?? 'Promo' }}
                         </span>
@@ -78,6 +79,11 @@
                             </span>
 
                         </div>
+
+                        <a href="{{ route('promo.detail', $promotion->encoded_id) }}">
+                            Lihat Promo
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
 
                     </div>
 

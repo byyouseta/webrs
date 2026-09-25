@@ -485,31 +485,57 @@
             <!-- CARD -->
             @foreach($articles as $article)
 
-            <div class="info-card" data-category="{{ strtolower($article->type) }}">
 
-                <img src="{{ asset('storage/'.$article->thumbnail) }}"
-                    alt="{{ $article->translation->title ?? '' }}">
+                <div class="info-card" data-category="{{ strtolower($article->type) }}">
 
-                <div class="info-body">
+                    <img src="{{ asset('storage/'.$article->thumbnail) }}"
+                        alt="{{ $article->translation->title ?? '' }}">
 
-                    <span class="tag">
-                        {{ ucfirst($article->type) }}
-                    </span>
+                    <div class="info-body">
 
-                    <h5>
-                        {{ $article->translation->excerpt ?? '-' }}
-                    </h5>
+                        <a href="{{ route('artikel.detail', $article->translation->slug) }}">
 
-                    <small>
-                        {{ $article->published_at
-                            ? \Carbon\Carbon::parse($article->published_at)->translatedFormat('d M Y')
-                            : \Carbon\Carbon::parse($article->created_at)->translatedFormat('d M Y')
-                        }}
-                    </small>
+                                    <span class="tag">
+                                        {{ ucfirst($article->type) }}
+                                    </span>
+
+                                    <h5>
+                                        {{ $article->translation->excerpt ?? '-' }}
+                                    </h5>
+
+                                    <small>
+                                        {{ $article->published_at
+                                            ? \Carbon\Carbon::parse($article->published_at)->translatedFormat('d M Y')
+                                            : \Carbon\Carbon::parse($article->created_at)->translatedFormat('d M Y')
+                                        }}
+                                    </small>
+
+
+                         </a>
+
+                          <!-- ACTION -->
+                                    <div class="article-actions">
+
+                                        <button type="button"
+                                                class="btn-share"
+                                                data-url="{{ route('artikel.detail', $article->translation->slug) }}"
+                                                title="Bagikan artikel">
+                                            <i class="fas fa-share-alt"></i>
+                                        </button>
+
+                                        <button type="button"
+                                                class="btn-copy"
+                                                data-url="{{ route('artikel.detail', $article->translation->slug) }}"
+                                                title="Salin link">
+                                            <i class="fas fa-link"></i>
+                                        </button>
+
+                                    </div>
+
+                    </div>
 
                 </div>
 
-            </div>
 
             @endforeach
 
@@ -788,6 +814,84 @@ const testi = document.getElementById('testiSlider');
             setInterval(autoSlideTesti, 5000);
 
         });
+</script>
+<script>
+        document.addEventListener('click', function(e) {
+
+            // SHARE
+            const shareButton = e.target.closest('.btn-share');
+
+            if (shareButton) {
+
+                const url = shareButton.dataset.url;
+
+                if (navigator.share) {
+
+                    navigator.share({
+                        title: document.title,
+                        url: url
+                    }).catch(() => {});
+
+                } else {
+
+                    navigator.clipboard.writeText(url);
+
+                    showCopyMessage();
+                }
+            }
+
+
+            // COPY LINK
+            const copyButton = e.target.closest('.btn-copy');
+
+            if (copyButton) {
+
+                const url = copyButton.dataset.url;
+
+                navigator.clipboard.writeText(url).then(function() {
+
+                    showCopyMessage();
+
+                });
+
+            }
+
+        });
+
+
+        function showCopyMessage() {
+
+            // Hapus toast lama
+            const oldToast = document.querySelector('.copy-toast');
+
+            if (oldToast) {
+                oldToast.remove();
+            }
+
+            const toast = document.createElement('div');
+
+            toast.className = 'copy-toast';
+
+            toast.innerHTML = `
+                <i class="fas fa-check-circle"></i>
+                Link berhasil disalin
+            `;
+
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 10);
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+
+                setTimeout(() => {
+                    toast.remove();
+                }, 300);
+
+            }, 2000);
+        }
 </script>
 
 @endsection

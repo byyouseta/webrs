@@ -34,6 +34,7 @@ class LandingPageController extends Controller
         ->take(10)
         ->get();
 
+
         $heroBanners = HeroBanner::where('is_active', true)
         ->orderBy('sort')
         ->get();
