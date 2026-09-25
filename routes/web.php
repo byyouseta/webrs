@@ -10,7 +10,7 @@ use App\Http\Controllers\Web\InformasiController;
 use App\Http\Controllers\Web\PpidController;
 use App\Http\Controllers\Web\PromoController;
 use App\Http\Controllers\Web\LayananController;
-
+use App\Http\Controllers\Web\ArtikelController;
 use App\Http\Controllers\Web\LandingPageController;
 // use Spatie\Sitemap\SitemapGenerator;
 
@@ -123,15 +123,11 @@ Route::get('/informasi/hkp/', [InformasiController::class, 'hkp'])->name('info_h
 Route::get('/informasi/privacy/', [InformasiController::class, 'privacy'])->name('info_privacy');
 Route::get('/informasi/faq/', [InformasiController::class, 'faq'])->name('info_faq');
 
+Route::get('/yangterbaru/artikel/{slug}',[ArtikelController::class, 'detailArtikel'])->name('artikel.detail');
 
-Route::get('/yangterbaru/artikel/', function () {
-    abort(404);
-})->name('info_artikel');
 
-Route::get('/yangterbaru/berita/', function () {
-    abort(404);
-})->name('info_berita');
+Route::get('/yangterbaru/artikel/',[ArtikelController::class, 'Artikel'])->name('info_artikel');
+Route::get('/yangterbaru/berita/',[ArtikelController::class, 'Berita'])->name('info_berita');
+Route::get('/yangterbaru/pengumuman/',[ArtikelController::class, 'Pengumuman'])->name('info_pengumuman');
 
-Route::get('/yangterbaru/pengumuman/', function () {
-    abort(404);
-})->name('info_pengumuman');
+Route::get('/promo/{id}', [PromoController::class, 'detailPromotion'])->name('promo.detail');

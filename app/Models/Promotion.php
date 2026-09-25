@@ -71,4 +71,16 @@ class Promotion extends Model
                 now()
             );
     }
+
+    public function getEncodedIdAttribute()
+    {
+        return rtrim(
+            strtr(
+                base64_encode($this->id),
+                '+/',
+                '-_'
+            ),
+            '='
+        );
+    }
 }
