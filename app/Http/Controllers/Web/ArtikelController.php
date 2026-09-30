@@ -39,6 +39,65 @@ class ArtikelController extends Controller
         ));
     }
 
+
+     public function detailBerita($slug)
+    {
+        $locale = app()->getLocale();
+
+        // Pastikan hanya id / en
+        if (!in_array($locale, ['id', 'en'])) {
+            $locale = 'id';
+        }
+
+        $berita = Article::with([
+            'translations' => function ($query) use ($locale) {
+                $query->where('locale', $locale);
+            }
+        ])
+        ->where('is_published', 1)
+        ->whereHas('translations', function ($query) use ($slug, $locale) {
+            $query->where('slug', $slug)
+                ->where('locale', $locale);
+        })
+        ->firstOrFail();
+
+        $translation = $berita->translations->first();
+
+        return view('pages.informasi.berita_detail', compact(
+            'berita',
+            'translation'
+        ));
+    }
+
+     public function detailPengumuman($slug)
+    {
+        $locale = app()->getLocale();
+
+        // Pastikan hanya id / en
+        if (!in_array($locale, ['id', 'en'])) {
+            $locale = 'id';
+        }
+
+        $pengumuman = Article::with([
+            'translations' => function ($query) use ($locale) {
+                $query->where('locale', $locale);
+            }
+        ])
+        ->where('is_published', 1)
+        ->whereHas('translations', function ($query) use ($slug, $locale) {
+            $query->where('slug', $slug)
+                ->where('locale', $locale);
+        })
+        ->firstOrFail();
+
+        $translation = $pengumuman->translations->first();
+
+        return view('pages.informasi.pengumuman_detail', compact(
+            'pengumuman',
+            'translation'
+        ));
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -52,7 +111,7 @@ class ArtikelController extends Controller
             $locale = 'id';
         }
 
-        $article = Article::with([
+        $articles = Article::with([
             'translations' => function ($query) use ($locale) {
                 $query->where('locale', $locale);
             }
@@ -66,7 +125,7 @@ class ArtikelController extends Controller
 
         //dd($article);
          return view('pages.informasi.artikel', compact(
-            'article',
+            'articles',
             'locale'
         ));
 
@@ -102,12 +161,13 @@ class ArtikelController extends Controller
         ));
 
 
+
     }
 
 
      public function Pengumuman(request $request){
         $locale = app()->getLocale();
-        $type='berita';
+        $type='pengumuman';
 
         // Pastikan hanya id / en
         if (!in_array($locale, ['id', 'en'])) {

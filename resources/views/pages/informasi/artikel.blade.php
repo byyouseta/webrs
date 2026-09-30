@@ -284,8 +284,8 @@
 
             <div class="artikel-breadcrumb">
 
-                <a href="{{ url('/') }}">
-                    Home
+                <a href="/yangterbaru/artikel">
+                Home
                 </a>
 
                 <span class="mx-2">/</span>
@@ -304,8 +304,7 @@
 
         </div>
 
-
-        @if($articles->count())
+            @if($articles->count())
 
             <div class="row">
 
@@ -314,27 +313,20 @@
 
                     @php
                         $mainArticle = $articles->first();
-                    @endphp
-
-                    @php
                         $mainTranslation = $mainArticle->translations->first();
                     @endphp
-
 
                     @if($mainTranslation)
 
                         <article class="artikel-main">
 
                             @if($mainArticle->thumbnail)
-
                                 <img
                                     src="{{ asset('storage/'.$mainArticle->thumbnail) }}"
                                     class="artikel-main-image"
                                     alt="{{ $mainTranslation->title }}"
                                 >
-
                             @endif
-
 
                             <div class="artikel-main-body">
 
@@ -343,52 +335,38 @@
                                 </span>
 
                                 <h2 class="artikel-main-title">
-
                                     {{ $mainTranslation->title }}
-
                                 </h2>
 
-
                                 <div class="artikel-date">
-
                                     <i class="fas fa-calendar-alt mr-1"></i>
 
                                     {{ $mainArticle->published_at
                                         ? \Carbon\Carbon::parse($mainArticle->published_at)->translatedFormat('d F Y')
                                         : \Carbon\Carbon::parse($mainArticle->created_at)->translatedFormat('d F Y')
                                     }}
-
                                 </div>
-
 
                                 @if($mainTranslation->excerpt)
 
                                     <div class="artikel-excerpt">
-
                                         {{ strip_tags($mainTranslation->excerpt) }}
-
                                     </div>
 
                                 @elseif($mainTranslation->content)
 
                                     <div class="artikel-excerpt">
-
                                         {{ \Illuminate\Support\Str::limit(strip_tags($mainTranslation->content), 300) }}
-
                                     </div>
 
                                 @endif
-
 
                                 <a
                                     href="{{ route('artikel.detail', $mainTranslation->slug) }}"
                                     class="artikel-read"
                                 >
-
                                     Baca Selengkapnya
-
                                     <i class="fas fa-arrow-right"></i>
-
                                 </a>
 
                             </div>
@@ -399,7 +377,6 @@
 
                 </div>
 
-
                 {{-- ================= SIDEBAR ================= --}}
                 <div class="col-lg-4">
 
@@ -408,7 +385,6 @@
                         <div class="sidebar-title">
                             Artikel Lainnya
                         </div>
-
 
                         @foreach($articles->skip(1) as $item)
 
@@ -424,15 +400,12 @@
                                 >
 
                                     @if($item->thumbnail)
-
                                         <img
                                             src="{{ asset('storage/'.$item->thumbnail) }}"
                                             class="sidebar-image"
                                             alt="{{ $translation->title }}"
                                         >
-
                                     @endif
-
 
                                     <div class="sidebar-content">
 
@@ -441,28 +414,25 @@
                                         </h6>
 
                                         <div class="sidebar-date">
-
                                             {{ $item->published_at
                                                 ? \Carbon\Carbon::parse($item->published_at)->translatedFormat('d M Y')
                                                 : \Carbon\Carbon::parse($item->created_at)->translatedFormat('d M Y')
                                             }}
-
                                         </div>
 
                                     </div>
 
                                 </a>
 
-                            @endforeach
+                            @endif
 
-                        @endif
+                        @endforeach
 
                     </div>
 
                 </div>
 
             </div>
-
 
             {{-- ================= TAGS ================= --}}
             <div class="artikel-tags">
@@ -476,27 +446,11 @@
                 </div>
 
                 <div>
-
-                    <span class="tag-item">
-                        Kesehatan
-                    </span>
-
-                    <span class="tag-item">
-                        Pelayanan
-                    </span>
-
-                    <span class="tag-item">
-                        Rumah Sakit
-                    </span>
-
-                    <span class="tag-item">
-                        RSUP Surakarta
-                    </span>
-
-                    <span class="tag-item">
-                        Informasi Kesehatan
-                    </span>
-
+                    <span class="tag-item">Kesehatan</span>
+                    <span class="tag-item">Pelayanan</span>
+                    <span class="tag-item">Rumah Sakit</span>
+                    <span class="tag-item">RSUP Surakarta</span>
+                    <span class="tag-item">Informasi Kesehatan</span>
                 </div>
 
             </div>
@@ -518,6 +472,8 @@
             </div>
 
         @endif
+
+
 
     </div>
 

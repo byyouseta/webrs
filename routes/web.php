@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
-
 use App\Http\Controllers\Web\DokterController;
 use App\Http\Controllers\Web\TentangKamiController;
 use App\Http\Controllers\Web\InformasiController;
@@ -124,6 +122,8 @@ Route::get('/informasi/privacy/', [InformasiController::class, 'privacy'])->name
 Route::get('/informasi/faq/', [InformasiController::class, 'faq'])->name('info_faq');
 
 Route::get('/yangterbaru/artikel/{slug}',[ArtikelController::class, 'detailArtikel'])->name('artikel.detail');
+Route::get('/yangterbaru/berita/{slug}',[ArtikelController::class, 'detailBerita'])->name('berita.detail');
+Route::get('/yangterbaru/pengumuman/{slug}',[ArtikelController::class, 'detailPengumuman'])->name('pengumuman.detail');
 
 
 Route::get('/yangterbaru/artikel/',[ArtikelController::class, 'Artikel'])->name('info_artikel');
