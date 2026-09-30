@@ -276,7 +276,7 @@
 
             <div class="pengumuman-breadcrumb">
 
-                <a href="{{ url('/') }}">
+                <a href="/yangterbaru/pegumuman">
                     Home
                 </a>
 
@@ -376,7 +376,7 @@
 
 
                                 <a
-                                    href="{{ route('artikel.detail', $mainTranslation->slug) }}"
+                                    href="{{ route('pengumuman.detail', $mainTranslation->slug) }}"
                                     class="pengumuman-read"
                                 >
 
