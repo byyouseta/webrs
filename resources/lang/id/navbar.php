@@ -35,10 +35,11 @@ return [
         'directors'                     =>  'Direksi',
         'award'                         =>  'Penghargaan',
         'location_contact'              =>  'Lokasi dan Kontak',
+        'duties_functions'              =>  'Tugas dan Fungsi',
 
 
     'information' => 'Informasi',
-       'ppid'                       => 'PPID',
+
        'availbility_tt'             => 'Tempat Tidur',
        'patient_registration'       => 'Registrasi Pasien',
        'services_rate'              => 'Tarif Layanan',
@@ -51,6 +52,16 @@ return [
           'news'            => 'Berita',
           'article'         => 'Artikel',
           'announcement'    => 'Pengumuman',
+
+     'ppid'                       => 'PPID',
+        'ppid_profil'          => 'Profil',
+        'ppid_visimisi'        => 'Visi Misi',
+        'ppid_struktur'        => 'Struktur Organisasi',
+        'ppid_tugas'           => 'Tugas dan Wewenang',
+        'ppid_maklumat'        => 'Makluman Pelayanan',
+          'ppid_form'        => 'Permohonan Informasi Publik',
+          'ppid_sop'        => 'Kebijakan / Keputusan',
+          'ppid_file'        => 'Dokumen PPID',
 
 
 ];

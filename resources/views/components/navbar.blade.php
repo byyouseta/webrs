@@ -245,6 +245,11 @@
                                     {{ __('navbar.organizational_structure') }}
                                     </a>
                                 </li>
+                                 <li>
+                                    <a class="dropdown-item" href="{{ route('tugas_fungsi') }}">
+                                    {{ __('navbar.duties_functions') }}
+                                    </a>
+                                </li>
                                 <li>
                                     <a class="dropdown-item" href="{{ route('dewan_pengawas') }}">
                                     {{ __('navbar.supervisory_board') }}
@@ -354,11 +359,70 @@
                     </ul>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('ppid') }}">
-                          {{ __('navbar.ppid') }}
+
+
+                <!-- DROPDOWN -->
+                <li class="nav-item dropdown dropdown-custom">
+
+                    <a class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown">
+                        {{ __('navbar.ppid') }}
                     </a>
+
+                    <ul class="dropdown-menu dropdown-menu-custom">
+
+                        <!-- MENU BIASA -->
+                         <li>
+                            <a class="dropdown-item" href="{{ route('ppid_profil') }}">
+                               {{ __('navbar.ppid_profil') }}
+                            </a>
+                        </li>
+                         <li>
+                            <a class="dropdown-item" href="{{ route('ppid_visimisi') }}">
+                               {{ __('navbar.ppid_visimisi') }}
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="{{ route('ppid_struktur') }}">
+                               {{ __('navbar.ppid_struktur') }}
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ route('ppid_tugas') }}">
+                               {{ __('navbar.ppid_tugas') }}
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ route('ppid_maklumat') }}">
+                               {{ __('navbar.ppid_maklumat') }}
+                            </a>
+                        </li>
+
+
+                         <li>
+                            <a class="dropdown-item" href="{{ route('ppid_sop') }}">
+                               {{ __('navbar.ppid_sop') }}
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="{{ route('ppid_form') }}">
+                               {{ __('navbar.ppid_form') }}
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="{{ route('ppid_file') }}">
+                               {{ __('navbar.ppid_file') }}
+                            </a>
+                        </li>
+
+                    </ul>
                 </li>
+
 
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('promo') }}">

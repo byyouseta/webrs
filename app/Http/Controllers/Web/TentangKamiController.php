@@ -53,6 +53,11 @@ class TentangKamiController extends Controller
         return view('pages.tentangkami.lokasi');
     }
 
+    public function tugasfungsi()
+    {
+        return view('pages.tentangkami.tugasfungsi');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

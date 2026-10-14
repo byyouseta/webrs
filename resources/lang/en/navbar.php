@@ -33,10 +33,11 @@ return [
         'directors'                     =>  'Directors',
         'award'                         =>  'Award',
         'location_contact'              =>  'Location & Map',
+        'duties_functions'              =>  'Duties and Function',
 
 
     'information'   => 'Information',
-       'ppid'                      => 'PPID',
+
        'availbility_tt'             => 'Bed Availability',
        'patient_registration'       => 'Patient Registration',
        'services_rate'              => 'Services Rates',
@@ -49,5 +50,17 @@ return [
         'news'      => 'News',
         'article'   => 'Article',
         'announcement'   => 'Announcement',
+
+    'ppid'                     => 'PPID',
+        'ppid_profil'          => 'Profile',
+        'ppid_visimisi'        => 'Vision and Mission',
+        'ppid_struktur'        => 'Organizational structure',
+        'ppid_tugas'           => 'Duties and Authority',
+        'ppid_maklumat'        => 'Service Charter',
+
+        'ppid_file'         => 'Document Public Information',
+        'ppid_form'         => 'Request for Public Information',
+        'ppid_sop'          => 'Policy / Decision',
+
 
 ];
