@@ -88,7 +88,7 @@ Route::get('/lang/{locale}', function ($locale) {
 Route::get('/dokter',      [DokterController::class, 'index'])->name('dokter_list');
 Route::get('/tentangkami', [TentangKamiController::class, 'index'])->name('tentang_kami');
 Route::get('/informasi', [InformasiController::class, 'index'])->name('informasi');
-Route::get('/ppid', [PpidController::class, 'index'])->name('ppid');
+
 Route::get('/promo', [PromoController::class, 'index'])->name('promo');
 Route::get('/layanan/umum/', [LayananController::class, 'index'])->name('layanan_umum');
 Route::get('/layanan/eksekutif/', [LayananController::class, 'eksekutif'])->name('layanan_eksekutif');
@@ -111,6 +111,7 @@ Route::get('/tentangkami/dewas/', [TentangKamiController::class, 'dewas'])->name
 Route::get('/tentangkami/direksi/', [TentangKamiController::class, 'direksi'])->name('direksi');
 Route::get('/tentangkami/penghargaan/', [TentangKamiController::class, 'penghargaan'])->name('penghargaan');
 Route::get('/tentangkami/lokasi/', [TentangKamiController::class, 'lokasi'])->name('lokasi_kontak');
+Route::get('/tentangkami/tugasfungsi/', [TentangKamiController::class, 'tugasfungsi'])->name('tugas_fungsi');
 
 
 Route::get('/informasi/bed/', [InformasiController::class, 'bed'])->name('info_bed');
@@ -129,5 +130,20 @@ Route::get('/yangterbaru/pengumuman/{slug}',[ArtikelController::class, 'detailPe
 Route::get('/yangterbaru/artikel/',[ArtikelController::class, 'Artikel'])->name('info_artikel');
 Route::get('/yangterbaru/berita/',[ArtikelController::class, 'Berita'])->name('info_berita');
 Route::get('/yangterbaru/pengumuman/',[ArtikelController::class, 'Pengumuman'])->name('info_pengumuman');
+
+Route::get('/ppid', [PpidController::class, 'index'])->name('ppid');
+Route::get('/ppid/profil', [PpidController::class, 'ppid_profil'])->name('ppid_profil');
+Route::get('/ppid/visimisi',[PpidController::class, 'ppid_visimisi'])->name('ppid_visimisi');
+Route::get('/ppid/struktur',[PpidController::class, 'ppid_struktur'])->name('ppid_struktur');
+Route::get('/ppid/tugaswewenang',[PpidController::class, 'ppid_tugas'])->name('ppid_tugas');
+Route::get('/ppid/maklumat',[PpidController::class, 'ppid_maklumat'])->name('ppid_maklumat');
+
+Route::get('/ppid/form',[PpidController::class, 'ppid_form'])->name('ppid_form');
+Route::post('/ppid/form/submit',[PpidController::class, 'ppid_form_submit'])->name('ppid_form_store');
+
+Route::get('/ppid/sop',[PpidController::class, 'ppid_sop'])->name('ppid_sop');
+Route::get('/ppid/file',[PpidController::class, 'index'])->name('ppid_file');
+
+
 
 Route::get('/promo/{id}', [PromoController::class, 'detailPromotion'])->name('promo.detail');
