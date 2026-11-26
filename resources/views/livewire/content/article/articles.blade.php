@@ -1,4 +1,27 @@
 <div>
+    {{-- Notifikasi Sukses --}}
+    @if (session('success'))
+        <div class="alert alert-success alert-dismissible fade show mb-3" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
+
+    {{-- Notifikasi Error Umum / Try-Catch (misal gagal simpan atau gagal hapus) --}}
+    @if (session('error'))
+        <div class="alert alert-danger alert-dismissible fade show mb-3" role="alert">
+            {{ session('error') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
+
+    {{-- Notifikasi Jika Ada Error Validasi Form (Opsional, berguna karena form pakai tab ID/EN) --}}
+    @if ($errors->any())
+        <div class="alert alert-danger alert-dismissible fade show mb-3" role="alert">
+            <strong>Gagal menyimpan!</strong> Periksa kembali isian pada tab Indonesia maupun English.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
     <div class="d-flex flex-column flex-md-row gap-2 mb-3">
         <div style="flex:1; max-width:500px;">
             <input type="text" class="form-control" placeholder="Cari judul atau konten..."
@@ -29,11 +52,7 @@
 
     @if ($showForm)
 
-        @if (session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
+
 
         <form wire:submit.prevent="save">
             <div class="card">
@@ -148,7 +167,7 @@
                                         .then(editor => {
                                             // Set data awal jika ada
                                             editor.setData(@this.get('content_id') || '');
-                            
+
                                             editor.model.document.on('change:data', () => {
                                                 @this.set('content_id', editor.getData());
                                             });
@@ -191,7 +210,7 @@
                                         .then(editor => {
                                             // Set data awal jika ada
                                             editor.setData(@this.get('content_en') || '');
-                            
+
                                             editor.model.document.on('change:data', () => {
                                                 @this.set('content_en', editor.getData());
                                             });
