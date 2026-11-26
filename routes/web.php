@@ -10,6 +10,7 @@ use App\Http\Controllers\Web\PromoController;
 use App\Http\Controllers\Web\LayananController;
 use App\Http\Controllers\Web\ArtikelController;
 use App\Http\Controllers\Web\LandingPageController;
+
 // use Spatie\Sitemap\SitemapGenerator;
 
 // Route::get('/generate-sitemap', function () {
@@ -63,6 +64,8 @@ Route::get('content/promotions', [App\Http\Controllers\ContentController::class,
 Route::get('content/testimonials', [App\Http\Controllers\ContentController::class, 'testimonials'])->name('content.testimonials');
 Route::get('content/ppids', [App\Http\Controllers\ContentController::class, 'ppids'])->name('content.ppids');
 Route::get('content/doctors', [App\Http\Controllers\ContentController::class, 'doctors'])->name('content.doctors');
+Route::get('content/ppid-requests', [App\Http\Controllers\ContentController::class, 'ppidRequests'])->name('content.ppid-requests');
+Route::get('content/ppid-requests/{id}/pdf', [App\Http\Controllers\ContentController::class,'ppidRequestPdf'])->name('content.ppid-requests.pdf');
 
 Route::get('master/languages', [App\Http\Controllers\MasterController::class, 'languages'])->name('master.languages');
 Route::get('master/header', [App\Http\Controllers\MasterController::class, 'header'])->name('master.header');
@@ -73,6 +76,8 @@ Route::get('/master/users', [App\Http\Controllers\UserController::class, 'index'
 Route::get('/master/permissions', [App\Http\Controllers\UserController::class, 'permissions'])->name('master.permissions');
 Route::get('/master/roles', [App\Http\Controllers\UserController::class, 'role'])->name('master.roles');
 Route::get('/master/logs', [App\Http\Controllers\UserController::class, 'logs'])->name('master.logs');
+
+
 
 
 
@@ -139,7 +144,7 @@ Route::get('/ppid/tugaswewenang',[PpidController::class, 'ppid_tugas'])->name('p
 Route::get('/ppid/maklumat',[PpidController::class, 'ppid_maklumat'])->name('ppid_maklumat');
 
 Route::get('/ppid/form',[PpidController::class, 'ppid_form'])->name('ppid_form');
-Route::post('/ppid/form/submit',[PpidController::class, 'ppid_form_submit'])->name('ppid_form_store');
+Route::post('/ppid/form/submit',[PpidController::class, 'ppid_form_submit'])->middleware('throttle:3,1')->name('ppid_form_store');
 
 Route::get('/ppid/sop',[PpidController::class, 'ppid_sop'])->name('ppid_sop');
 Route::get('/ppid/file',[PpidController::class, 'index'])->name('ppid_file');

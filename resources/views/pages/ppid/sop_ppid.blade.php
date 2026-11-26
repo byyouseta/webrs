@@ -147,6 +147,92 @@
             </div>
 
 
+            {{-- =================================================
+                SOP 02
+            ================================================= --}}
+            <div class="ppid-sop-card">
+
+                {{-- PDF PREVIEW --}}
+                <div class="ppid-sop-preview">
+
+                    <iframe
+                        src="{{ asset('storage/sop_ppid/SOP_AP_PROSES_PENDOKUMENTASIAN_INFORMASI_PUBLIK-SRIKANDI.pdf') }}"
+                        title="Preview Kebijakan"
+                        loading="lazy"
+                    ></iframe>
+
+                    {{-- FLOATING BUTTON --}}
+                    <div class="ppid-sop-preview-button">
+
+                        <a
+                            href="{{ asset('storage/sop_ppid/SOP_AP_PROSES_PENDOKUMENTASIAN_INFORMASI_PUBLIK-SRIKANDI.pdf') }}"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <i class="fas fa-expand"></i>
+                            Buka PDF
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                {{-- DOCUMENT INFO --}}
+                <div class="ppid-sop-content">
+
+                    <div class="ppid-sop-document-icon">
+
+                        <i class="fas fa-file-pdf"></i>
+
+                    </div>
+
+                    <div class="ppid-sop-document-info">
+
+                        <span class="ppid-sop-label">
+                            Pendokumentasion Informasi Publik
+                        </span>
+
+                        <h3>
+                            SOP AP
+                        </h3>
+
+                        <p>
+                           Pendokumentasion Informasi Publik
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                {{-- ACTION --}}
+                <div class="ppid-sop-footer">
+
+                    <a
+                        href="{{ asset('storage/sop_ppid/SOP_AP_PROSES_PENDOKUMENTASIAN_INFORMASI_PUBLIK-SRIKANDI.pdf') }}"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn-sop-view"
+                    >
+                        <i class="fas fa-file-pdf"></i>
+                        Buka PDF
+                    </a>
+
+                    <a
+                        href="{{ asset('storage/sop_ppid/SOP_AP_PROSES_PENDOKUMENTASIAN_INFORMASI_PUBLIK-SRIKANDI.pdf') }}"
+                        download
+                        class="btn-sop-download"
+                    >
+                        <i class="fas fa-download"></i>
+                        Download PDF
+                    </a>
+
+                </div>
+
+            </div>
+
+
 
              {{-- =================================================
                 SOP 02

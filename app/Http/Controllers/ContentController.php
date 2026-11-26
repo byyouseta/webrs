@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\PpidInformationRequest;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class ContentController extends Controller
 {
@@ -53,4 +55,10 @@ class ContentController extends Controller
     {
         return view('backend.content.doctors');
     }
+
+    public function ppidRequests()
+    {
+        return view('backend.content.ppid-requests');
+    }
+
 }

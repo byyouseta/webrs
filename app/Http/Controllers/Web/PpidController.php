@@ -66,6 +66,10 @@ class PpidController extends Controller
 
     public function ppid_form_submit(request $request)
     {
+        if ($request->filled('website_url')) {
+            abort(422, 'Permintaan tidak valid.');
+        }
+
         $validated = $request->validate([
             'applicant_name' => [
                 'required',
@@ -126,7 +130,7 @@ class PpidController extends Controller
                 'required',
                 'file',
                 'mimes:jpg,jpeg,png,pdf',
-                'max:2048'
+                'max:4096'
             ],
         ], [
             'applicant_name.required' =>
