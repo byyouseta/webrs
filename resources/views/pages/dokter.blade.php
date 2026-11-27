@@ -65,13 +65,15 @@
 
                     <span>{{ $dokter['spesialis'] }}</span>
 
-                    <a
-                        href="https://epasien.rsupsurakarta.id/"
-                        target="_blank"
-                        class="btn-primary"
-                    >
-                        {{ __('doctor.booking') }}
-                    </a>
+                    @if(count($dokter['jadwal'] ?? []) > 0)
+                        <a href="https://epasien.rsupsurakarta.id/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn-primary">
+                            {{ __('doctor.booking') }}
+                        </a>
+                    @endif
+
 
                 </div>
 

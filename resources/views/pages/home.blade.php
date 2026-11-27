@@ -636,6 +636,24 @@
 
             </a>
 
+            <a href="#"
+            class="feedback-item-rsup"
+            target="_blank">
+
+                <img src="{{ asset('img/icon/sinergi3.jpeg') }}"
+                    alt="e-Office Kemenkes"
+                    class="feedback-logo">
+
+                <div class="feedback-text">
+                    <h5>SINERGI</h5>
+                    <p>(Sistem Informasi Regulasi dan Kebijakan Internal)</p>
+                </div>
+
+                <span class="arrow">
+                    →
+                </span>
+
+            </a>
         </div>
 
     </div>
