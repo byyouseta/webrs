@@ -58,7 +58,7 @@ return [
         'ppid_visimisi'        => 'Visi Misi',
         'ppid_struktur'        => 'Struktur Organisasi',
         'ppid_tugas'           => 'Tugas dan Wewenang',
-        'ppid_maklumat'        => 'Makluman Pelayanan',
+        'ppid_maklumat'        => 'Maklumat Pelayanan',
           'ppid_form'        => 'Permohonan Informasi Publik',
           'ppid_sop'        => 'Kebijakan / Keputusan',
           'ppid_file'        => 'Dokumen PPID',
